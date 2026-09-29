@@ -33,30 +33,30 @@ Deviation said out loud: plaster + green + brass sits near the "cream canvas" fa
 - Body: **Public Sans** 400, 500. Quiet, architectural, very legible.
 - Mono labels: **IBM Plex Mono** 500. Blueprint callouts, step numbers, measurements.
 
-## 4. Storyboard (Tier 2, three chained segments, about 18 seconds, hero about 1000vh)
+## 4. Storyboard (as built: two chained segments, 12 seconds, hero 850vh)
 
-| Seg | World | Camera | Boundary / lens moment | Final frame | Text lives |
-|---|---|---|---|---|---|
-| 1 | Blue hour outside a renovated two-storey GTA brick home, black-framed windows, one big ground-floor window glowing warm | Slow, steady forward push straight toward the glowing window | Passing through the glass: soft reflection flare and a short blur beat | Mid-motion, just inside, the finished kitchen opening up ahead | Left third (house sits centre-right) |
-| 2 | The finished kitchen: white oak cabinets, warm plaster walls, stone island, brass pendants, lamplight | Continuous forward glide past the island, gentle arc toward an open staircase going down | none | Mid-motion at the top of the stairs, camera beginning to tilt down | Left then right as the glide passes |
-| 3 | The stairs down into a warm finished basement: oak floor, built-in shelves, fireplace wall, deep sofa, soft lamps | Descends the stairs, then settles into a wide, level view of the lounge | none | At rest: wide, level, symmetric basement lounge, calm upper third | Upper centre (settle) |
-
-Seams sit inside motion (just after the glass blur, and mid-stair), per the seam law.
-
-## 5. Band map
-
-| Band | Range | Footage moment | Copy (verbatim) | Entrance |
+| Seg | World | Camera | Boundary / lens moment | Final frame |
 |---|---|---|---|---|
-| 1 | 0.00 to 0.12 | Dusk house, still far | **Your home, built plumb.** / Renovations and custom builds across the GTA. Straight lines, straight talk. | Word rise, load ramp |
-| 2 | 0.16 to 0.30 | Pushing toward the window | **No vanishing after the deposit.** / A written, fixed quote. Payments tied to finished work. | Approach from depth |
-| 3 | 0.36 to 0.50 | Gliding through the kitchen | **Kitchens you'll want to cook in.** / Cabinets, counters, plumbing, lighting. One crew handles all of it. | Grid snap, sliding with the glide |
-| 4 | 0.54 to 0.68 | Arc toward the stairs | **One project lead. One number.** / You always know who to call, and they pick up. | Blur to sharp |
-| 5 | 0.72 to 0.86 | Descending the stairs | **Then we head downstairs.** / Basements finished into rooms your family actually uses. | Drift down, with the descent |
-| 6 | 0.90 to 1.00 | Rest on the basement lounge | **Let's build it right.** / Free consultation. A clear, written quote. / [Book a free consultation] [647-895-4555] | Staged settle |
+| 1 | Blue hour outside a renovated two-storey GTA brick home, big ground-floor window glowing | Slow, steady push straight toward the glowing window | Through the glass: soft flare and a short blur beat | Mid-motion inside the white oak kitchen |
+| 2 | The kitchen, then a cutaway down through the floor | Tilts down and sinks vertically through the floor (joists, insulation, copper pipes shown as a section cut), emerges from the basement ceiling | The floor cross-section is the lens moment and the texture refresh | At rest: wide, level, symmetric basement lounge with fireplace and oak built-ins |
+
+Revision note: two earlier versions of segment 2 were rejected at the video gate because the stairs made no architectural sense (a stair going up, then a hatch in the kitchen aisle, then a doorway through a solid wall). The floor cutaway replaced the stair idea: no invented doors, and scrolling down literally goes down.
+
+## 5. Band map (as built, validated by the flick test and the worst-frame audit)
+
+| Band | Range | Footage moment | Copy (verbatim) | Entrance | Worst-pixel contrast |
+|---|---|---|---|---|---|
+| 1 | 0.00 to 0.14 | Dusk house, still far | **Your home, built plumb.** / Renovations and custom builds across the GTA. Straight lines, straight talk. | Word rise, load ramp | 5.57:1 |
+| 2 | 0.18 to 0.36 | Pushing toward the window | **No vanishing after the deposit.** / A written, fixed quote. Payments tied to finished work. | Approach from depth | 4.96:1 |
+| 3 | 0.47 to 0.63 | Inside the kitchen | **Kitchens you'll want to cook in.** / Cabinets, counters, plumbing, lighting. One crew handles all of it. | Grid snap | 3.73:1 |
+| 4 | 0.67 to 0.82 | Sinking through the floor | **We build what's behind the walls.** / Framing, plumbing, insulation. The parts you never see, done right. | Blur to sharp | 4.78:1 |
+| 5 | 0.87 to 1.00 | Rest on the basement lounge | **Let's build it right.** / Free consultation. A clear, written quote. / [Book a free consultation] [647-895-4555] | Staged settle | 4.35:1 |
+
+Flick test: every band holds full opacity for 6 to 8 steps at 120px, and none is skippable at 360px.
 
 ## 6. Static hero (phones, portrait tablets, reduced motion)
 
-Over the ending frame: **Your home, built plumb.** / Renovations, basements, kitchens and custom builds across the GTA. Straight lines, straight talk. / [Book a free consultation] [Call 647-895-4555]
+Over the dusk house, cropped around the glowing window: **Your home, built plumb.** / Renovations, basements, kitchens and custom builds across the GTA. Straight lines, straight talk. / [Book a free consultation] [Call 647-895-4555]
 
 ## 7. Site map (multi-page for SEO)
 

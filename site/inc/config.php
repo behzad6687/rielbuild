@@ -25,7 +25,7 @@ define('NOINDEX', true);
 define('SITE_URL_OVERRIDE', '');
 
 /* Asset version for cache busting. Bump after changing CSS or JS. */
-define('ASSET_V', '1.0.0');
+define('ASSET_V', '1.0.1');
 
 /* ---- base path detection (works in any folder, e.g. /demo/rielbuild/) ---- */
 function rb_base_path()

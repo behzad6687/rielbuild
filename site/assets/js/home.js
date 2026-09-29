@@ -16,7 +16,7 @@
   var VIDEO_BYTES = +film.getAttribute('data-bytes') || 12000000;
   var POSTER_URL = film.getAttribute('data-poster');
   var bands = Array.prototype.slice.call(film.querySelectorAll('.band'));
-  var chapters = [[0, '01 / Outside'], [0.34, '02 / Kitchen'], [0.7, '03 / Downstairs']];
+  var chapters = [[0, '01 / Outside'], [0.44, '02 / Kitchen'], [0.74, '03 / Downstairs']];
 
   var clamp = function (v, lo, hi) { return Math.min(hi, Math.max(lo, v)); };
   var smooth = function (p, e0, e1) { var t = clamp((p - e0) / (e1 - e0), 0, 1); return t * t * (3 - 2 * t); };

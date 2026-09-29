@@ -32,42 +32,35 @@ echo plumb_line();
     <div class="film__scrim" aria-hidden="true"></div>
 
     <div class="film__bands">
-      <div class="band band--l fx-rise" data-a="0" data-b="0.13" data-fx="rise">
+      <div class="band band--l fx-rise" data-a="0" data-b="0.14" data-fx="rise">
         <div class="band__in">
           <p class="kicker">Renovation &amp; construction, GTA</p>
           <p class="band__h" data-split>Your home, built plumb.</p>
           <p class="band__p band__sub">Renovations and custom builds across the GTA. Straight lines, straight talk.</p>
         </div>
       </div>
-      <div class="band band--l fx-depth" data-a="0.16" data-b="0.31" data-fx="depth">
+      <div class="band band--l fx-depth" data-a="0.18" data-b="0.36" data-fx="depth" style="--sa:.84">
         <div class="band__in">
           <p class="kicker">The first promise</p>
           <h2 class="band__h" data-split>No vanishing after the deposit.</h2>
           <p class="band__p band__sub">A written, fixed quote. Payments tied to finished work.</p>
         </div>
       </div>
-      <div class="band band--l fx-snap" data-a="0.36" data-b="0.51" data-fx="snap" data-ramp="0.034">
+      <div class="band band--l fx-snap" data-a="0.47" data-b="0.63" data-fx="snap" style="--sa:.86" data-ramp="0.034">
         <div class="band__in">
           <p class="kicker">Kitchens</p>
           <h2 class="band__h" data-split>Kitchens you'll want to cook in.</h2>
           <p class="band__p band__sub">Cabinets, counters, plumbing, lighting. One crew handles all of it.</p>
         </div>
       </div>
-      <div class="band band--r fx-blur" data-a="0.54" data-b="0.68" data-fx="blur">
+      <div class="band band--r fx-blur" data-a="0.67" data-b="0.82" data-fx="blur">
         <div class="band__in">
-          <p class="kicker">How we run a job</p>
-          <h2 class="band__h" style="position:relative"><span class="band__sharp">One project lead. One number.</span><span class="band__soft" aria-hidden="true">One project lead. One number.</span></h2>
-          <p class="band__p band__sub">You always know who to call, and they pick up.</p>
+          <p class="kicker">Built true</p>
+          <h2 class="band__h" style="position:relative"><span class="band__sharp">We build what's behind the walls.</span><span class="band__soft" aria-hidden="true">We build what's behind the walls.</span></h2>
+          <p class="band__p band__sub">Framing, plumbing, insulation. The parts you never see, done right.</p>
         </div>
       </div>
-      <div class="band band--l fx-drift" data-a="0.72" data-b="0.86" data-fx="drift">
-        <div class="band__in">
-          <p class="kicker">Basements</p>
-          <h2 class="band__h" data-split>Then we head downstairs.</h2>
-          <p class="band__p band__sub">Basements finished into rooms your family actually uses.</p>
-        </div>
-      </div>
-      <div class="band band--c fx-rise" data-a="0.9" data-b="1" data-fx="rise">
+      <div class="band band--c fx-rise" data-a="0.87" data-b="1" data-fx="rise" style="--sa:.94">
         <div class="band__in">
           <h2 class="band__h" data-split>Let's build it right.</h2>
           <p class="band__p band__sub">Free consultation. A clear, written quote.</p>

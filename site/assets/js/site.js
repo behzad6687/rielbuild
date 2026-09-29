@@ -41,7 +41,7 @@
     var closeAll = function () { if (openItem) setOpen(openItem, false); openItem = null; };
     var movePill = function (el) {
       if (!pill || !el) return;
-      var nr = nav.getBoundingClientRect(), r = el.getBoundingClientRect();
+      var nr = (pill.offsetParent || nav).getBoundingClientRect(), r = el.getBoundingClientRect();
       pill.style.width = r.width + 'px';
       pill.style.transform = 'translate(' + (r.left - nr.left) + 'px,' + (r.top - nr.top) + 'px)';
       nav.classList.add('has-pill');
