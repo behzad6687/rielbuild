@@ -1,6 +1,6 @@
 /* RIELBUILD home: the scroll-scrubbed film. Plain JS.
    Streamed Blob fetch + ring, dt-normalized lerp, gated seeks, delta-gated writes,
-   caption bands paced in scroll distance, five live static-hero gates. */
+   caption bands paced in scroll distance, portrait cut for phones, live reduced-motion gate. */
 (function () {
   'use strict';
   var d = document, w = window, body = d.body;
@@ -130,30 +130,41 @@
     new IntersectionObserver(function (en) { heroOnScreen = en[0].isIntersecting; if (heroOnScreen) kick(); }, { threshold: 0 }).observe(film);
   }
 
-  /* ---- streamed Blob with honest ring ---- */
-  var heroInit = false, started = false;
-  function initHeroOnce() {
-    if (heroInit) return; heroInit = true;
-    posterLayer.style.backgroundImage = "url('" + POSTER_URL + "')";
+  /* ---- streamed Blob with honest ring. Two cuts of the same film:
+         'd' widescreen for landscape screens, 'm' portrait crop for phones and portrait tablets ---- */
+  var SRC = {
+    d: { url: VIDEO_URL, bytes: VIDEO_BYTES, poster: POSTER_URL },
+    m: { url: film.getAttribute('data-video-m') || VIDEO_URL, bytes: +film.getAttribute('data-bytes-m') || VIDEO_BYTES, poster: film.getAttribute('data-poster-m') || POSTER_URL }
+  };
+  var PORTRAIT = w.matchMedia('(orientation: portrait)');
+  function wantVariant() { return (PORTRAIT.matches || w.innerWidth <= 720) ? 'm' : 'd'; }
+  var blobs = {}, loading = {}, current = null, posterFor = null;
+
+  function initHero() {
+    var v = wantVariant();
+    if (v === current) return;
+    if (blobs[v]) { useVariant(v); return; }
+    if (loading[v]) return;
+    loading[v] = true;
+    var poster = SRC[v].poster;
+    if (!current && posterFor !== v) { posterFor = v; posterLayer.style.backgroundImage = "url('" + poster + "')"; }
+    var go = false;
+    var start = function () { if (go) return; go = true; loadBlob(v).catch(function () { loading[v] = false; if (!current) failVideo(); }); };
     var img = new Image();
-    img.onload = startBlobFetch; img.onerror = startBlobFetch;
-    img.src = POSTER_URL;
-    setTimeout(startBlobFetch, 4000);
-  }
-  function startBlobFetch() {
-    if (started) return; started = true;
-    loadHeroBlob().catch(failVideo);
+    img.onload = start; img.onerror = start; img.src = poster;
+    setTimeout(start, 4000);
   }
   function setRing(frac) { if (ring) ring.style.setProperty('--ld', Math.round(126 * (1 - frac))); }
-  function loadHeroBlob() {
+  function loadBlob(v) {
     if (!w.fetch || !w.ReadableStream || location.protocol === 'file:') return Promise.reject(new Error('no fetch'));
     var ctrl = w.AbortController ? new AbortController() : null;
     var watchdog = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
     var opts = ctrl ? { signal: ctrl.signal } : {};
     try { opts.priority = 'low'; } catch (e) { /* older browsers */ }
-    return fetch(VIDEO_URL, opts).then(function (res) {
+    if (!current) setRing(0);
+    return fetch(SRC[v].url, opts).then(function (res) {
       if (!res.ok || !res.body) throw new Error('bad response');
-      var total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
+      var total = Number(res.headers.get('Content-Length')) || SRC[v].bytes;
       var reader = res.body.getReader(), chunks = [], got = 0, lastRing = 0;
       function pump() {
         return reader.read().then(function (r) {
@@ -162,43 +173,56 @@
           watchdog = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
           chunks.push(r.value); got += r.value.length;
           var frac = Math.min(1, got / total), now = performance.now();
-          if (now - lastRing > 100 || frac === 1) { lastRing = now; setRing(frac); }
+          if (!current && (now - lastRing > 100 || frac === 1)) { lastRing = now; setRing(frac); }
           return pump();
         });
       }
       return pump().then(function () {
         clearTimeout(watchdog);
-        setRing(1);
-        video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
-        video.load();
-        video.addEventListener('loadeddata', function () {
-          measure();
-          requestSeek(heroProgress() * video.duration);
-          film.classList.add('video-ready');
-          kick();
-        }, { once: true });
+        if (!current) setRing(1);
+        blobs[v] = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
+        loading[v] = false;
+        if (wantVariant() === v || !current) useVariant(v);
       });
     });
   }
+  function useVariant(v) {
+    current = v;
+    seekBusy = false; pendingTime = null;
+    video.preload = 'auto';
+    video.muted = true;
+    video.src = blobs[v];
+    video.load();
+    video.addEventListener('loadeddata', function () {
+      measure();
+      /* iOS Safari only paints seeked frames once the element has played:
+         a muted inline play-then-pause primes the decoder (allowed without a tap). */
+      var pr = video.play();
+      var settle = function () { video.pause(); requestSeek(heroProgress() * video.duration); film.classList.add('video-ready'); kick(); };
+      if (pr && pr.then) pr.then(settle).catch(settle); else settle();
+    }, { once: true });
+  }
+  /* belt and braces for iOS: prime again on the first touch */
+  d.addEventListener('touchstart', function () {
+    if (!video.src) return;
+    var pr = video.play();
+    if (pr && pr.then) pr.then(function () { video.pause(); requestSeek(shown * video.duration); }).catch(function () {});
+  }, { passive: true, once: true });
   function failVideo() {
     film.classList.add('video-failed');
     if (ring) ring.style.display = 'none';
   }
 
-  /* ---- five static-hero gates, identical to the CSS, decided live ---- */
-  var GATES = [
-    '(max-width: 720px)',
-    '(orientation: portrait) and (max-width: 1024px)',
-    '(orientation: portrait) and (pointer: coarse)',
-    '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
-    '(prefers-reduced-motion: reduce)'
-  ];
+  /* ---- the static-hero gate. The film now plays on phones too; the still hero is kept for
+         reduced motion (same query as the CSS, decided live) and for Data Saver visitors. ---- */
+  var GATES = ['(prefers-reduced-motion: reduce)'];
   var MQLS = GATES.map(function (q) { return w.matchMedia(q); });
+  var saveData = !!(navigator.connection && navigator.connection.saveData);
   var scrubOn = false;
   function enableScrub() {
     if (scrubOn) return; scrubOn = true;
     film.classList.remove('is-static');
-    initHeroOnce();
+    initHero();
     measure();
     w.addEventListener('scroll', onScroll, { passive: true });
     w.addEventListener('resize', onResize);
@@ -209,19 +233,22 @@
     onScroll();
   }
   function disableScrub() {
-    if (!scrubOn) { film.classList.add('is-static'); return; }
-    scrubOn = false;
     film.classList.add('is-static');
+    if (!scrubOn) return;
+    scrubOn = false;
     w.removeEventListener('scroll', onScroll);
     w.removeEventListener('resize', onResize);
     if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; }
   }
   function applyHeroMode() {
-    if (MQLS.some(function (m) { return m.matches; })) disableScrub(); else enableScrub();
+    if (saveData || MQLS.some(function (m) { return m.matches; })) disableScrub(); else enableScrub();
   }
   MQLS.forEach(function (m) {
     if (m.addEventListener) m.addEventListener('change', applyHeroMode); else if (m.addListener) m.addListener(applyHeroMode);
   });
+  /* rotating a phone or tablet swaps to the matching cut, keeping the scroll position */
+  var onOrient = function () { if (scrubOn) { measure(); initHero(); } };
+  if (PORTRAIT.addEventListener) PORTRAIT.addEventListener('change', onOrient); else if (PORTRAIT.addListener) PORTRAIT.addListener(onOrient);
   /* past-film flag still matters for the plumb line in static mode */
   w.addEventListener('scroll', function () { if (!scrubOn) { measure(); setPastFilm(); } }, { passive: true });
   applyHeroMode();

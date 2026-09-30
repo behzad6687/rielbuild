@@ -7,7 +7,8 @@ $page = array(
     'path'  => '',
     'body'  => 'page-home',
     'scripts' => array('js/home.js'),
-    'preload' => '<link rel="preload" as="image" href="' . e(url('assets/img/hero-poster.jpg')) . '" media="(min-width: 721px) and (prefers-reduced-motion: no-preference)">',
+    'preload' => '<link rel="preload" as="image" href="' . e(url('assets/img/hero-poster.jpg')) . '" media="(orientation: landscape) and (min-width: 721px) and (prefers-reduced-motion: no-preference)">'
+        . '<link rel="preload" as="image" href="' . e(url('assets/img/hero-poster-m.jpg')) . '" media="((orientation: portrait) or (max-width: 720px)) and (prefers-reduced-motion: no-preference)">',
     'schema' => array(
         array('@context' => 'https://schema.org', '@type' => 'WebSite', 'name' => SITE_NAME, 'url' => abs_url('')),
         array('@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => array_map(function ($q) {
@@ -25,7 +26,10 @@ echo plumb_line();
 <section class="film" id="film" aria-label="Your home, built plumb"
   data-video="<?= e(url('assets/video/hero-scrub.mp4')) ?>"
   data-bytes="<?= (int) @filesize(__DIR__ . '/assets/video/hero-scrub.mp4') ?>"
-  data-poster="<?= e(url('assets/img/hero-poster.jpg')) ?>">
+  data-poster="<?= e(url('assets/img/hero-poster.jpg')) ?>"
+  data-video-m="<?= e(url('assets/video/hero-scrub-m.mp4')) ?>"
+  data-bytes-m="<?= (int) @filesize(__DIR__ . '/assets/video/hero-scrub-m.mp4') ?>"
+  data-poster-m="<?= e(url('assets/img/hero-poster-m.jpg')) ?>">
   <div class="film__stage">
     <div class="film__poster" style="--static-img:url('<?= e(url('assets/img/hero-static.jpg')) ?>')" aria-hidden="true"></div>
     <video class="film__video" preload="none" muted playsinline disablepictureinpicture aria-hidden="true" tabindex="-1"></video>

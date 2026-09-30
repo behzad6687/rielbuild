@@ -32,6 +32,10 @@ The site detects its own folder, so it also works in any other folder or at a do
 4. Replace illustrative images in `site/assets/img/stills/` with real project photos (same file names: `name.jpg`, `name.webp`, `name-sm.webp`) and remove the footer note in `site/inc/footer.php`.
 5. Submit `https://rielbuild.ca/sitemap.xml` in Google Search Console.
 
+## The scroll film
+
+`site/assets/video/hero-scrub.mp4` (widescreen, desktops and landscape) and `hero-scrub-m.mp4` (portrait, phones and portrait tablets). Visitors with reduced motion or Data Saver get a still hero instead.
+
 ## SEO included
 
 Unique title and description per page, canonical URLs, Open Graph and Twitter cards, JSON-LD (GeneralContractor, Service, FAQPage, BreadcrumbList, HowTo, WebSite), dynamic `sitemap.xml` and `robots.txt`, semantic headings, image alt text, fast static pages with long-cache headers and gzip.

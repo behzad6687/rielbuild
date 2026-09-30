@@ -54,9 +54,11 @@ Revision note: two earlier versions of segment 2 were rejected at the video gate
 
 Flick test: every band holds full opacity for 6 to 8 steps at 120px, and none is skippable at 360px.
 
-## 6. Static hero (phones, portrait tablets, reduced motion)
+## 6. Phones and the static hero
 
-Over the dusk house, cropped around the glowing window: **Your home, built plumb.** / Renovations, basements, kitchens and custom builds across the GTA. Straight lines, straight talk. / [Book a free consultation] [Call 647-895-4555]
+Phones and portrait tablets get the same scroll film, from a portrait cut (`hero-scrub-m.mp4`, 810x1080, 2.8 MB) that pans with the action: framed on the glowing window for the house and kitchen, then easing to centre for the floor cutaway and basement. Captions sit low above the thumb bar on a bottom shade (worst-pixel contrast 3.9:1 to 9.9:1 at 390px). Rotating swaps to the matching cut at the same scroll position. iOS is primed with a muted play-then-pause.
+
+The still hero (dusk house crop, "Your home, built plumb.") is kept only for reduced-motion visitors and Data Saver.
 
 ## 7. Site map (multi-page for SEO)
 

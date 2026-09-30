@@ -226,7 +226,6 @@ main{display:block;outline:none}
 .fx-rise .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*.6em))}
 .fx-depth .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);opacity:var(--kc);transform:scale(calc(.8 + .2*var(--kc)))}
 .fx-snap .c{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1);opacity:var(--kc);transform:translateX(calc((1 - var(--kc))*var(--jx,0px)))}
-.fx-blur{position:relative}
 .fx-blur .band__soft{position:absolute;inset:0;filter:blur(10px);opacity:calc(1 - var(--k,0))}
 .fx-blur .band__sharp{opacity:var(--k,0)}
 .fx-drift .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*-.55em))}
@@ -241,20 +240,48 @@ main{display:block;outline:none}
 .film__progress{position:absolute;left:var(--gut);bottom:30px;display:flex;align-items:center;gap:12px;font:500 11px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--on-dark-2)}
 .film__progress span{padding:7px 11px;border-radius:999px;background:rgba(10,14,12,.5);border:1px solid var(--line-d);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 @media (max-height:560px){.film__cue,.film__progress,.film__ring{display:none}}
-/* static hero: identical five gates in site-home.js */
+/* static hero: only for reduced motion (same query as home.js) or Data Saver (JS adds .is-static).
+   Phones and tablets get the scroll film, using the portrait cut. */
 .film__static{display:none}
-@media (max-width:720px),(orientation:portrait) and (max-width:1024px),(orientation:portrait) and (pointer:coarse),(orientation:landscape) and (pointer:coarse) and (max-height:560px),(prefers-reduced-motion:reduce){
+.film.is-static{height:auto}
+.film.is-static .film__stage{position:relative;height:auto;min-height:100svh}
+.film.is-static .film__video,.film.is-static .film__bands,.film.is-static .film__ring,.film.is-static .film__cue,.film.is-static .film__progress{display:none}
+.film.is-static .film__poster{background-image:var(--static-img)!important}
+.film.is-static .film__static{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;min-height:100svh;padding:calc(var(--top-h) + 40px) var(--gut) calc(56px + env(safe-area-inset-bottom));color:var(--on-dark);text-shadow:var(--tshadow)}
+.film.is-static .film__static::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,11,9,.4) 0%,rgba(8,11,9,.12) 30%,rgba(8,11,9,.72) 55%,rgba(8,11,9,.94) 100%)}
+.film.is-static .film__static .h1{font-size:clamp(40px,11vw,64px)}
+.film.is-static .film__static .lede{color:#E6E8E2;margin-top:14px}
+.film.is-static .film__static .btn-row{margin-top:24px}
+.film.is-static .film__static .btn{text-shadow:none}
+.film.is-static .film__static .btn--ghost{color:var(--on-dark)}
+@media (prefers-reduced-motion:reduce){
   .film{height:auto}
-  .film__stage{position:relative;height:auto;min-height:100svh}
-  .film__video,.film__bands,.film__ring,.film__cue,.film__progress{display:none}
-  .film__poster{background-image:var(--static-img)}
-  .film__static{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;min-height:100svh;padding:calc(var(--top-h) + 40px) var(--gut) calc(56px + env(safe-area-inset-bottom));color:var(--on-dark);text-shadow:var(--tshadow)}
-  .film__static::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,11,9,.4) 0%,rgba(8,11,9,.12) 30%,rgba(8,11,9,.72) 55%,rgba(8,11,9,.94) 100%)}
-  .film__static .h1{font-size:clamp(40px,11vw,64px)}
-  .film__static .lede{color:#E6E8E2;margin-top:14px}
-  .film__static .btn-row{margin-top:24px}
-  .film__static .btn{text-shadow:none}
-  .film__static .btn--ghost{color:var(--on-dark)}
+  .film .film__stage{position:relative;height:auto;min-height:100svh}
+  .film .film__video,.film .film__bands,.film .film__ring,.film .film__cue,.film .film__progress{display:none}
+  .film .film__poster{background-image:var(--static-img)!important}
+  .film .film__static{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;min-height:100svh;padding:calc(var(--top-h) + 40px) var(--gut) calc(56px + env(safe-area-inset-bottom));color:var(--on-dark);text-shadow:var(--tshadow)}
+  .film .film__static::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(8,11,9,.4) 0%,rgba(8,11,9,.12) 30%,rgba(8,11,9,.72) 55%,rgba(8,11,9,.94) 100%)}
+  .film .film__static .h1{font-size:clamp(40px,11vw,64px)}
+  .film .film__static .lede{color:#E6E8E2;margin-top:14px}
+  .film .film__static .btn-row{margin-top:24px}
+  .film .film__static .btn{text-shadow:none}
+  .film .film__static .btn--ghost{color:var(--on-dark)}
+}
+/* phones: the film plays in portrait; captions sit low, above the thumb bar, on a bottom shade */
+@media (max-width:760px){
+  .band{align-items:flex-end;padding:calc(var(--top-h) + 20px) 20px calc(120px + env(safe-area-inset-bottom))}
+  .band--l,.band--r{justify-content:flex-start;text-align:left}
+  .band::before,.band--l::before,.band--r::before,.band--c::before{inset:0;background:linear-gradient(0deg,rgba(6,9,7,var(--sa)) 0%,rgba(6,9,7,calc(var(--sa)*.78)) 34%,rgba(6,9,7,0) 66%)}
+  .band__in,.band--r .band__in{width:100%;padding:0}
+  .band--c .band__in{align-self:flex-end;margin-top:0}
+  .band__h{font-size:clamp(31px,9.2vw,46px);line-height:1.04}
+  .band__p{margin-top:12px;font-size:16px;max-width:none}
+  .band .kicker{margin-bottom:12px}
+  .band .btn-row{margin-top:20px;gap:10px}
+  .band .btn-row .btn{flex:1 1 100%}
+  .film__cue,.film__progress{display:none}
+  .film__ring{bottom:calc(96px + env(safe-area-inset-bottom));right:16px;width:36px;height:36px}
+}
 }
 
 /* ---------------- sections ---------------- */
