@@ -8,7 +8,7 @@ $page = array(
 );
 include dirname(__DIR__) . '/inc/header.php';
 echo plumb_line();
-$filters = array('all' => 'All work', 'kitchen' => 'Kitchens', 'bathroom' => 'Bathrooms', 'basement' => 'Basements', 'home' => 'Full home', 'construction' => 'Construction');
+$filters = array('all' => 'All work', 'kitchen' => 'Kitchens', 'bathroom' => 'Bathrooms', 'basement' => 'Basements', 'home' => 'Full home');
 ?>
 <main id="main" tabindex="-1">
 <?= page_hero('Projects', 'Rooms people <span class="brass">actually live in.</span>', 'Warm materials, honest details and clean lines. A look at the kind of spaces we build across the GTA.', 'stills/kitchen-2', $page['crumbs']) ?>

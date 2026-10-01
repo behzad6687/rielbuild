@@ -5,9 +5,9 @@
       <div class="foot__brand">
         <a class="brand brand--foot" href="<?= e(url('')) ?>" aria-label="RIELBUILD home">
           <svg class="brand__mark" width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
-          <span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Construction &amp; Renovation</small></span>
+          <span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Renovation &amp; Remodelling</small></span>
         </a>
-        <p class="foot__line">Renovations and custom builds across the Greater Toronto Area. Straight lines, straight talk.</p>
+        <p class="foot__line">Home renovations across the Greater Toronto Area. Straight lines, straight talk.</p>
         <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation</a>
       </div>
       <div class="foot__col">
@@ -49,7 +49,7 @@
 <dialog class="sheet" id="menu-sheet" aria-label="Menu">
   <div class="sheet__in">
     <div class="sheet__top">
-      <a class="brand" href="<?= e(url('')) ?>"><svg class="brand__mark" width="36" height="36" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg><span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Construction &amp; Renovation</small></span></a>
+      <a class="brand" href="<?= e(url('')) ?>"><svg class="brand__mark" width="36" height="36" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg><span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Renovation &amp; Remodelling</small></span></a>
       <button class="icon-btn sheet__x" type="button" data-sheet-close aria-label="Close menu"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-close"/></svg></button>
     </div>
     <div class="sheet__groups">
@@ -61,7 +61,7 @@
         </div>
       </details>
       <details class="sgroup">
-        <summary><span class="sgroup__chip"><img data-src="<?= e(url('assets/img/stills/design-build-sm.webp')) ?>" alt="" width="48" height="48"></span><span>About</span><svg class="ico ico--chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></summary>
+        <summary><span class="sgroup__chip"><img data-src="<?= e(url('assets/img/stills/planning-sm.webp')) ?>" alt="" width="48" height="48"></span><span>About</span><svg class="ico ico--chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></summary>
         <div class="sgroup__body">
           <a href="<?= e(url('about/')) ?>">Who we are</a>
           <a href="<?= e(url('process/')) ?>#promise">The plumb promise</a>

@@ -3,7 +3,7 @@
 
 /* Contact details */
 define('SITE_NAME', 'RIELBUILD');
-define('SITE_LEGAL', 'RIELBUILD Construction & Renovation');
+define('SITE_LEGAL', 'RIELBUILD Renovation');
 define('PHONE', '647-895-4555');
 define('PHONE_TEL', '+16478954555');
 define('EMAIL', 'contact@rielbuild.ca');
@@ -25,7 +25,7 @@ define('NOINDEX', true);
 define('SITE_URL_OVERRIDE', '');
 
 /* Asset version for cache busting. Bump after changing CSS or JS. */
-define('ASSET_V', '1.1.0');
+define('ASSET_V', '1.2.0');
 
 /* ---- base path detection (works in any folder, e.g. /demo/rielbuild/) ---- */
 function rb_base_path()

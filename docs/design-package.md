@@ -62,11 +62,11 @@ The still hero (dusk house crop, "Your home, built plumb.") is kept only for red
 
 ## 7. Site map (multi-page for SEO)
 
-Home, Services (overview + Home Renovation, Kitchen Renovation, Bathroom Renovation, Basement Finishing, Design-Build, Custom Home Construction), Process, Projects, About, FAQ, Service Areas, Contact, 404. Every page funnels to one call to action: **Book a free consultation** (contact page form).
+Home, Services (overview + Home Renovation, Kitchen Renovation, Bathroom Renovation, Basement Finishing), Process, Projects, About, FAQ, Service Areas, Contact, 404. Every page funnels to one call to action: **Book a free consultation** (contact page form).
 
 ## 8. Home below the fold
 
-1. **What we build**: six service cards with image preview.
+1. **What we build**: four service cards with image preview. (Design-Build and Custom Home Construction were removed at the client's request: RIELBUILD does not offer them.)
 2. **The plumb promise** (interactive moment): "Hold to set it plumb." Holding settles the swinging bob; four promises light up in turn: A fixed, written quote. Payments tied to finished work. One project lead, start to finish. A clean site at the end of every day.
 3. **How it works**: four steps on a self-drawing line (Talk, Design and quote, Build, Walk through), each with its own image.
 4. **Recent work** (illustrative imagery): gallery strip.

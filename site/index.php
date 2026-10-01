@@ -2,8 +2,8 @@
 require __DIR__ . '/inc/boot.php';
 $faqHome = array_slice($FAQ, 0, 6);
 $page = array(
-    'title' => 'RIELBUILD | Home Renovation & Construction Contractor in Toronto & the GTA',
-    'desc'  => 'Kitchen, bathroom and basement renovations, full home remodels and custom builds across the GTA. Fixed written quotes, one project lead, payments tied to finished work.',
+    'title' => 'RIELBUILD | Home Renovation Contractor in Toronto & the GTA',
+    'desc'  => 'Kitchen, bathroom and basement renovations and full home remodels across the GTA. Fixed written quotes, one project lead, payments tied to finished work.',
     'path'  => '',
     'body'  => 'page-home',
     'scripts' => array('js/home.js'),
@@ -20,7 +20,7 @@ include __DIR__ . '/inc/header.php';
 echo plumb_line();
 ?>
 <main id="main" tabindex="-1">
-<h1 class="sr">RIELBUILD: home renovation and construction contractor in Toronto and the GTA</h1>
+<h1 class="sr">RIELBUILD: home renovation contractor in Toronto and the GTA</h1>
 
 <!-- The scroll film: street, window, kitchen, stairs, basement -->
 <section class="film" id="film" aria-label="Your home, built plumb"
@@ -38,9 +38,9 @@ echo plumb_line();
     <div class="film__bands">
       <div class="band band--l fx-rise" data-a="0" data-b="0.14" data-fx="rise">
         <div class="band__in">
-          <p class="kicker">Renovation &amp; construction, GTA</p>
+          <p class="kicker">Home renovation, GTA</p>
           <p class="band__h" data-split>Your home, built plumb.</p>
-          <p class="band__p band__sub">Renovations and custom builds across the GTA. Straight lines, straight talk.</p>
+          <p class="band__p band__sub">Home renovations across the GTA. Straight lines, straight talk.</p>
         </div>
       </div>
       <div class="band band--l fx-depth" data-a="0.18" data-b="0.36" data-fx="depth" style="--sa:.84">
@@ -82,9 +82,9 @@ echo plumb_line();
 
     <!-- static hero for phones, portrait tablets and reduced motion -->
     <div class="film__static">
-      <p class="kicker">Renovation &amp; construction, GTA</p>
+      <p class="kicker">Home renovation, GTA</p>
       <p class="h1" style="margin-top:14px">Your home, built plumb.</p>
-      <p class="lede">Renovations, basements, kitchens and custom builds across the GTA. Straight lines, straight talk.</p>
+      <p class="lede">Kitchens, bathrooms, basements and full renovations across the GTA. Straight lines, straight talk.</p>
       <div class="btn-row">
         <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation</a>
         <a class="btn btn--ghost" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call <?= e(PHONE) ?></a>
@@ -99,15 +99,15 @@ echo plumb_line();
     <div class="sec__head sec__head--split">
       <div class="reveal">
         <p class="kicker">What we build</p>
-        <h2 class="h2" style="margin-top:16px">Six ways we build. One way of working.</h2>
+        <h2 class="h2" style="margin-top:16px">Four ways we renovate. One way of working.</h2>
         <?= dimline() ?>
       </div>
-      <p class="lede reveal">From a single bathroom to a new custom home, every job gets the same fixed written quote, the same project lead and the same clean site.</p>
+      <p class="lede reveal">From a single bathroom to the whole house, every job gets the same fixed written quote, the same project lead and the same clean site.</p>
     </div>
     <div class="svc-grid stagger">
       <?php foreach ($SERVICES as $slug => $s): ?>
       <a class="svc" href="<?= e(url('services/' . $slug . '/')) ?>">
-        <div class="svc__media"><?= pic($s['img'], $s['name'] . ' by RIELBUILD', 800, 600, true, '(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw') ?><span class="svc__icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-<?= e($s['icon']) ?>"/></svg></span></div>
+        <div class="svc__media"><?= pic($s['img'], $s['name'] . ' by RIELBUILD', 800, 600, true, '(max-width: 600px) 100vw, (max-width: 1100px) 50vw, 25vw') ?><span class="svc__icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-<?= e($s['icon']) ?>"/></svg></span></div>
         <div class="svc__body">
           <h3 class="h3"><?= e($s['name']) ?></h3>
           <p><?= e($s['tag']) ?></p>

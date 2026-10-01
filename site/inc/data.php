@@ -94,52 +94,6 @@ $SERVICES = array(
             array('My basement gets a little damp. Can you still finish it?', 'Yes, but we fix the moisture first. Closing in a damp basement is how mould happens, and we will not do it.'),
         ),
     ),
-    'design-build' => array(
-        'name'  => 'Design-Build',
-        'short' => 'Design-Build',
-        'icon'  => 'plan',
-        'img'   => 'stills/design-build',
-        'tag'   => 'Design and construction under one contract, one team.',
-        'title' => 'Design-Build Renovation Services in the GTA',
-        'desc'  => 'Design-build renovations in the GTA: one team designs your project and builds it, under one contract with one fixed price.',
-        'lead'  => 'With design-build, you do not have to hire a designer, get drawings, then find a builder who agrees with them. Our team does both, so the design is priced and buildable from day one.',
-        'includes' => array(
-            'On-site consultation and measurements',
-            'Layout design and 3D views',
-            'Material and finish selections with you',
-            'Permit drawings',
-            'A fixed, written build price',
-            'Construction by the same team',
-        ),
-        'time' => 'Design usually takes 2 to 6 weeks before construction starts, depending on the size of the project.',
-        'faq' => array(
-            array('Do I need to find a designer first?', 'No. That is the point of design-build. Our team handles the design and the build, so you only manage one contract.'),
-            array('What if I already have drawings?', 'That is fine too. We can price and build from your plans, and suggest changes only where they save money or trouble.'),
-        ),
-    ),
-    'custom-home-construction' => array(
-        'name'  => 'Custom Home Construction',
-        'short' => 'Custom Homes',
-        'icon'  => 'frame',
-        'img'   => 'stills/construction',
-        'tag'   => 'New builds and additions, framed true from the footing up.',
-        'title' => 'Custom Home Construction & Additions in the GTA',
-        'desc'  => 'Custom home construction, additions and interior fit-outs across the GTA, built to your design plans at competitive, written prices.',
-        'lead'  => 'From a new home on your lot to a second-storey addition, we build to your design plans and keep you in the loop at every stage.',
-        'includes' => array(
-            'New custom homes and rebuilds',
-            'Home additions and second storeys',
-            'Base building and interior fit-outs',
-            'Coordination with your architect or designer',
-            'Site management and trades scheduling',
-            'Inspections and final walkthrough',
-        ),
-        'time' => 'A custom home typically takes just under a year, including planning. Additions often take 3 to 6 months.',
-        'faq' => array(
-            array('Can you work with my architect?', 'Yes. We build to your design documents and flag anything that needs adjusting early, within your budget and timeline.'),
-            array('Do you also design?', 'Yes. If you would rather have one team do both, see our design-build service.'),
-        ),
-    ),
 );
 
 $FAQ = array(
@@ -152,7 +106,6 @@ $FAQ = array(
     array('Do you handle permits?', 'Yes. We prepare the drawings, apply for permits and book the inspections, so you do not have to deal with the city.'),
     array('Who will I talk to during the project?', 'One project lead, from start to finish. You get their direct number, and they pick up.'),
     array('How do you deal with dust and mess?', 'We seal off the work area, protect your floors and furniture, and clean up at the end of every day. Your home should still feel like your home.'),
-    array('Do I need my own designer?', 'No. With our design-build service, our team designs and builds your project under one contract.'),
 );
 
 $AREAS = array('Toronto', 'North York', 'Etobicoke', 'Scarborough', 'East York', 'Vaughan', 'Richmond Hill', 'Markham', 'Thornhill', 'Mississauga', 'Oakville', 'Brampton', 'Aurora', 'Newmarket', 'Pickering', 'Ajax');
@@ -180,5 +133,4 @@ $PROJECTS = array(
     array('stills/mudroom', 'Mudroom with built-in benches', 'Full home', 'home'),
     array('stills/basement-bar', 'Basement wet bar and games room', 'Basement', 'basement'),
     array('stills/kitchen-2', 'Galley kitchen with brass details', 'Kitchen', 'kitchen'),
-    array('stills/construction', 'Second-storey addition, framing stage', 'Construction', 'construction'),
 );

@@ -1,7 +1,7 @@
 <?php
 /* Shared <head> + header. Expects $page = array(title, desc, path, [og], [schema], [body], [crumbs]). */
 if (!isset($page) || !is_array($page)) $page = array();
-$p_title = isset($page['title']) ? $page['title'] : SITE_NAME . ' | Renovation & Construction in the GTA';
+$p_title = isset($page['title']) ? $page['title'] : SITE_NAME . ' | Home Renovation in the GTA';
 $p_desc  = isset($page['desc']) ? $page['desc'] : '';
 $p_path  = isset($page['path']) ? $page['path'] : '';
 $p_og    = isset($page['og']) ? $page['og'] : 'img/og.jpg';
@@ -28,7 +28,7 @@ $ld[] = array(
     'address' => array('@type' => 'PostalAddress', 'addressLocality' => 'Toronto', 'addressRegion' => 'ON', 'addressCountry' => 'CA'),
     'areaServed' => array_map(function ($a) { return array('@type' => 'City', 'name' => $a); }, $GLOBALS['AREAS']),
     'openingHoursSpecification' => array(array('@type' => 'OpeningHoursSpecification', 'dayOfWeek' => array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'), 'opens' => '08:00', 'closes' => '18:00')),
-    'hasOfferCatalog' => array('@type' => 'OfferCatalog', 'name' => 'Renovation and construction services', 'itemListElement' => array_values(array_map(function ($s, $k) {
+    'hasOfferCatalog' => array('@type' => 'OfferCatalog', 'name' => 'Home renovation services', 'itemListElement' => array_values(array_map(function ($s, $k) {
         return array('@type' => 'Offer', 'itemOffered' => array('@type' => 'Service', 'name' => $s['name'], 'url' => abs_url('services/' . $k . '/')));
     }, $GLOBALS['SERVICES'], array_keys($GLOBALS['SERVICES'])))),
 );
@@ -88,7 +88,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
   <div class="wrap top__in">
     <a class="brand" href="<?= e(url('')) ?>" aria-label="RIELBUILD home">
       <svg class="brand__mark" width="40" height="40" aria-hidden="true" focusable="false"><use href="#i-mark"/></svg>
-      <span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Construction &amp; Renovation</small></span>
+      <span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Renovation &amp; Remodelling</small></span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Main">
@@ -109,7 +109,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
             </div>
             <aside class="mega__preview" aria-hidden="true">
               <span class="mega__photo"><img data-src="<?= e(url('assets/img/stills/kitchen-sm.webp')) ?>" alt="" width="480" height="300"></span>
-              <p class="mp__name">Six ways we build</p>
+              <p class="mp__name">Four ways we renovate</p>
               <p class="mp__tag">Every one with a fixed, written quote and one project lead.</p>
               <a class="btn btn--sm btn--brass" href="<?= e(url('services/')) ?>" tabindex="-1">All services</a>
             </aside>

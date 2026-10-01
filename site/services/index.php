@@ -1,8 +1,8 @@
 <?php
 require dirname(__DIR__) . '/inc/boot.php';
 $page = array(
-    'title'  => 'Renovation & Construction Services in Toronto & the GTA | RIELBUILD',
-    'desc'   => 'Full home renovations, kitchens, bathrooms, basements, design-build and custom homes across the GTA. One team, one fixed written quote, one project lead.',
+    'title'  => 'Home Renovation Services in Toronto & the GTA | RIELBUILD',
+    'desc'   => 'Full home renovations, kitchens, bathrooms and basements across the GTA. One team, one fixed written quote, one project lead.',
     'path'   => 'services/',
     'crumbs' => array(array('Services', 'services/')),
     'schema' => array(array('@context' => 'https://schema.org', '@type' => 'ItemList', 'itemListElement' => array_values(array_map(function ($s, $k, $i) {
@@ -13,14 +13,14 @@ include dirname(__DIR__) . '/inc/header.php';
 echo plumb_line();
 ?>
 <main id="main" tabindex="-1">
-<?= page_hero('Services', 'Everything your home needs, <span class="brass">built plumb.</span>', 'Six services, one way of working: a fixed written quote, one project lead, payments tied to finished work and a clean site every day.', 'stills/home-renovation', $page['crumbs']) ?>
+<?= page_hero('Services', 'Everything your home needs, <span class="brass">built plumb.</span>', 'Four services, one way of working: a fixed written quote, one project lead, payments tied to finished work and a clean site every day.', 'stills/home-renovation', $page['crumbs']) ?>
 
 <section class="sec">
   <div class="wrap">
-    <div class="svc-grid stagger">
+    <div class="svc-grid svc-grid--2 stagger">
       <?php foreach ($SERVICES as $slug => $s): ?>
       <a class="svc" href="<?= e(url('services/' . $slug . '/')) ?>">
-        <div class="svc__media"><?= pic($s['img'], $s['name'] . ' by RIELBUILD', 800, 600, true, '(max-width: 600px) 100vw, (max-width: 980px) 50vw, 33vw') ?><span class="svc__icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-<?= e($s['icon']) ?>"/></svg></span></div>
+        <div class="svc__media"><?= pic($s['img'], $s['name'] . ' by RIELBUILD', 800, 600, true, '(max-width: 600px) 100vw, 50vw') ?><span class="svc__icon"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-<?= e($s['icon']) ?>"/></svg></span></div>
         <div class="svc__body">
           <h2 class="h3"><?= e($s['name']) ?></h2>
           <p><?= e($s['lead']) ?></p>

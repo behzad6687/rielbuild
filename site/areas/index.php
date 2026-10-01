@@ -10,7 +10,7 @@ include dirname(__DIR__) . '/inc/header.php';
 echo plumb_line();
 ?>
 <main id="main" tabindex="-1">
-<?= page_hero('Where we work', 'Toronto and <span class="brass">the whole GTA.</span>', 'Kitchens, bathrooms, basements, full renovations and custom builds, from downtown Toronto to York, Peel and Durham.', 'hero-start', $page['crumbs']) ?>
+<?= page_hero('Where we work', 'Toronto and <span class="brass">the whole GTA.</span>', 'Kitchens, bathrooms, basements and full renovations, from downtown Toronto to York, Peel and Durham.', 'hero-start', $page['crumbs']) ?>
 
 <section class="sec">
   <div class="wrap">
