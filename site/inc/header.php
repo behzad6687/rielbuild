@@ -50,7 +50,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
 <?php else: ?><meta name="robots" content="index, follow, max-image-preview:large">
 <?php endif; ?>
 <link rel="canonical" href="<?= e($canonical) ?>">
-<meta name="theme-color" content="#141D19">
+<meta name="theme-color" content="#2F2F2F">
 <meta name="format-detection" content="telephone=no">
 <meta name="geo.region" content="CA-ON">
 <meta name="geo.placename" content="Toronto">
@@ -68,7 +68,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
 <meta name="twitter:title" content="<?= e($p_title) ?>">
 <meta name="twitter:description" content="<?= e($p_desc) ?>">
 <meta name="twitter:image" content="<?= e(abs_url('assets/' . $p_og)) ?>">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23141D19'/%3E%3Cpath d='M9 22 24 10l15 12' fill='none' stroke='%23C4913F' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 15v13' stroke='%23F2EDE4' stroke-width='1.6'/%3E%3Cpath d='M24 27c-2.8 0-4.8 2.2-4.8 4.4 0 2 4.8 8.8 4.8 8.8s4.8-6.8 4.8-8.8c0-2.2-2-4.4-4.8-4.4z' fill='%23C4913F'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23222222'/%3E%3Cpath d='M9 22 24 10l15 12' fill='none' stroke='%23FB4500' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 15v13' stroke='%23F4F4F4' stroke-width='1.6'/%3E%3Cpath d='M24 27c-2.8 0-4.8 2.2-4.8 4.4 0 2 4.8 8.8 4.8 8.8s4.8-6.8 4.8-8.8c0-2.2-2-4.4-4.8-4.4z' fill='%23FB4500'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="<?= e(url('assets/img/brand/apple-touch-icon.png')) ?>">
 <link rel="preload" href="<?= e(url('assets/fonts/bricolage-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="<?= e(url('assets/fonts/public-sans-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>
@@ -114,7 +114,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
               <a class="btn btn--sm btn--brass" href="<?= e(url('services/')) ?>" tabindex="-1">All services</a>
             </aside>
             <div class="mega__foot">
-              <a class="mfoot" href="<?= e(url('contact/')) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg><b>Book a free consultation</b><span>an honest price range on the first visit</span></a>
+              <a class="mfoot" href="<?= e(url('contact/')) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg><b>Book a free estimate</b><span>an honest price range on the first visit</span></a>
               <a class="mfoot" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><b><?= e(PHONE) ?></b><span>talk to a project lead</span></a>
             </div>
           </div>
@@ -125,7 +125,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
           <button class="nav__btn" type="button" aria-expanded="false" aria-controls="menu-about">About<svg class="ico ico--chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></button>
           <div class="menu menu--list" id="menu-about">
             <a class="mlink" href="<?= e(url('about/')) ?>"><b>Who we are</b><small>A GTA builder that works plumb</small></a>
-            <a class="mlink" href="<?= e(url('process/')) ?>#promise"><b>The plumb promise</b><small>Four things we put in writing</small></a>
+            <a class="mlink" href="<?= e(url('process/')) ?>#promise"><b>The way we work</b><small>Fixed quote, one lead, clean site</small></a>
             <a class="mlink" href="<?= e(url('areas/')) ?>"><b>Where we work</b><small>Toronto and the whole GTA</small></a>
             <a class="mlink" href="<?= e(url('faq/')) ?>"><b>Straight answers</b><small>Deposits, timelines, permits, dust</small></a>
           </div>
@@ -136,7 +136,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
 
     <div class="top__right">
       <a class="top__tel" href="tel:<?= e(PHONE_TEL) ?>" aria-label="Call <?= e(PHONE) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span><?= e(PHONE) ?></span></a>
-      <a class="btn btn--brass btn--sm top__cta" href="<?= e(url('contact/')) ?>">Free consultation</a>
+      <a class="btn btn--brass btn--sm top__cta" href="<?= e(url('contact/')) ?>">Free estimate</a>
       <button class="burger" type="button" data-sheet-open="menu-sheet" aria-haspopup="dialog" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </div>

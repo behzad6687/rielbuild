@@ -23,7 +23,7 @@ echo plumb_line();
 <h1 class="sr">RIELBUILD: home renovation contractor in Toronto and the GTA</h1>
 
 <!-- The scroll film: street, window, kitchen, stairs, basement -->
-<section class="film" id="film" aria-label="Your home, built plumb"
+<section class="film" id="film" aria-label="Home renovations across the GTA"
   data-video="<?= e(url('assets/video/hero-scrub.mp4')) ?>"
   data-bytes="<?= (int) @filesize(__DIR__ . '/assets/video/hero-scrub.mp4') ?>"
   data-poster="<?= e(url('assets/img/hero-poster.jpg')) ?>"
@@ -38,9 +38,9 @@ echo plumb_line();
     <div class="film__bands">
       <div class="band band--l fx-rise" data-a="0" data-b="0.14" data-fx="rise">
         <div class="band__in">
-          <p class="kicker">Home renovation, GTA</p>
-          <p class="band__h" data-split>Your home, built plumb.</p>
-          <p class="band__p band__sub">Home renovations across the GTA. Straight lines, straight talk.</p>
+          <p class="kicker">Renovation &amp; remodelling</p>
+          <p class="band__h" data-split>Home renovations across the GTA.</p>
+          <p class="band__p band__sub">Love your living space.</p>
         </div>
       </div>
       <div class="band band--l fx-depth" data-a="0.18" data-b="0.36" data-fx="depth" style="--sa:.84">
@@ -67,9 +67,9 @@ echo plumb_line();
       <div class="band band--c fx-rise" data-a="0.87" data-b="1" data-fx="rise" style="--sa:.94">
         <div class="band__in">
           <h2 class="band__h" data-split>Let's build it right.</h2>
-          <p class="band__p band__sub">Free consultation. A clear, written quote.</p>
+          <p class="band__p band__sub">Free estimate. A clear, written quote.</p>
           <div class="btn-row band__cta">
-            <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free estimate <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
             <a class="btn btn--ghost" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><?= e(PHONE) ?></a>
           </div>
         </div>
@@ -82,11 +82,11 @@ echo plumb_line();
 
     <!-- static hero for phones, portrait tablets and reduced motion -->
     <div class="film__static">
-      <p class="kicker">Home renovation, GTA</p>
-      <p class="h1" style="margin-top:14px">Your home, built plumb.</p>
-      <p class="lede">Kitchens, bathrooms, basements and full renovations across the GTA. Straight lines, straight talk.</p>
+      <p class="kicker">Renovation &amp; remodelling</p>
+      <p class="h1" style="margin-top:14px">Home renovations across the GTA.</p>
+      <p class="lede">Love your living space.</p>
       <div class="btn-row">
-        <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation</a>
+        <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free estimate</a>
         <a class="btn btn--ghost" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>Call <?= e(PHONE) ?></a>
       </div>
     </div>
@@ -119,7 +119,7 @@ echo plumb_line();
   </div>
 </section>
 
-<!-- The plumb promise: the one interactive moment -->
+<!-- The way we work: the one interactive moment -->
 <section class="sec on-dark promise" id="promise">
   <div class="wrap promise__grid">
     <div class="reveal">
@@ -133,10 +133,8 @@ echo plumb_line();
     </div>
     <div>
       <div class="reveal">
-        <p class="kicker">The plumb promise</p>
-        <h2 class="h2" style="margin-top:16px">Four things we put in writing.</h2>
+        <h2 class="h2">The way we work</h2>
         <?= dimline() ?>
-        <p class="lede" style="margin-top:18px">A plumb line only settles when it is true. So do we. Hold the bob still and see what every client gets.</p>
       </div>
       <ol class="pl" style="margin-top:30px">
         <?php foreach ($PROMISES as $pr): ?><li><b><?= e($pr[0]) ?></b><span><?= e($pr[1]) ?></span></li><?php endforeach; ?>
@@ -169,13 +167,12 @@ echo plumb_line();
   </div>
 </section>
 
-<!-- Recent work -->
+<!-- Room gallery -->
 <section class="sec sec--plaster2" id="work">
   <div class="wrap">
     <div class="sec__head sec__head--split">
       <div class="reveal">
-        <p class="kicker">Recent work</p>
-        <h2 class="h2" style="margin-top:16px">Rooms people actually live in.</h2>
+        <h2 class="h2">Rooms people actually live in.</h2>
         <?= dimline() ?>
       </div>
       <p class="lede reveal">Warm materials, honest details, clean lines. <a class="tlink" href="<?= e(url('projects/')) ?>">See all projects <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></p>

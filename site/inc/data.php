@@ -19,7 +19,7 @@ $SERVICES = array(
             'Kitchens and bathrooms as part of the whole plan',
             'Permits handled for you',
         ),
-        'time' => 'Most whole-home projects run 3 to 6 months. We give you a written timeline before work starts.',
+        'time' => "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail.",
         'faq' => array(
             array('Do we need to move out?', 'For a full gut renovation, usually yes, for part of the job. For a few rooms at a time, most families stay. We plan the order of work around how you live.'),
             array('Can we renovate in phases?', 'Yes. Many clients do the kitchen and main floor first, then the basement or bathrooms the next year. We design it as one plan so the phases fit together.'),
@@ -42,7 +42,7 @@ $SERVICES = array(
             'Plumbing and electrical, including new lighting',
             'Flooring, backsplash and tiling',
         ),
-        'time' => 'A typical kitchen takes 4 to 8 weeks once materials are on site.',
+        'time' => "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail.",
         'faq' => array(
             array('Can we keep using the kitchen during the work?', 'Not the room itself, but we can set up a simple temporary kitchen elsewhere in the house so you still have a fridge, microwave and sink nearby.'),
             array('Do you supply cabinets or can we buy our own?', 'Either works. We can source and install cabinets through our suppliers, or install ones you pick. We will tell you honestly if a product will cause problems.'),
@@ -53,9 +53,9 @@ $SERVICES = array(
         'short' => 'Bathrooms',
         'icon'  => 'bath',
         'img'   => 'stills/bathroom',
-        'tag'   => 'Waterproofed properly, tiled cleanly, finished in weeks.',
+        'tag'   => 'Waterproofed properly, tiled cleanly.',
         'title' => 'Bathroom Renovation in Toronto & the GTA',
-        'desc'  => 'Bathroom and ensuite renovations across the GTA. Proper waterproofing, clean tile work, new fixtures, done in weeks with a fixed written quote.',
+        'desc'  => 'Bathroom and ensuite renovations across the GTA. Proper waterproofing, clean tile work, new fixtures and a fixed written quote.',
         'lead'  => 'A bathroom is small, but it hides a lot of risk behind the tile. We take it down to the studs when it needs it, waterproof it properly, and finish it so it stays beautiful for years.',
         'includes' => array(
             'Full tear-out down to the studs when needed',
@@ -65,7 +65,7 @@ $SERVICES = array(
             'Floor and wall tile, heated floors',
             'Lighting, fans and electrical',
         ),
-        'time' => 'Most bathrooms take about 2 to 3 weeks. Larger ensuites can take a little longer.',
+        'time' => "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail.",
         'faq' => array(
             array('We only have one bathroom. What happens?', 'Tell us early. We plan the work so the toilet is out of action for as short a time as possible, and we can arrange a temporary option if needed.'),
             array('Do you do heated floors?', 'Yes. Electric in-floor heat is a common add-on and is installed under the tile before it goes down.'),
@@ -88,7 +88,7 @@ $SERVICES = array(
             'Flooring, trim, doors and paint',
             'Permits and inspections handled',
         ),
-        'time' => 'A typical basement takes 6 to 10 weeks, depending on bathrooms and permits.',
+        'time' => "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail.",
         'faq' => array(
             array('Do I need a permit to finish my basement?', 'In most GTA cities, yes, especially if you add a bathroom or change walls. We handle the drawings and the permit for you.'),
             array('My basement gets a little damp. Can you still finish it?', 'Yes, but we fix the moisture first. Closing in a damp basement is how mould happens, and we will not do it.'),
@@ -99,8 +99,8 @@ $SERVICES = array(
 $FAQ = array(
     array('How much do I pay up front?', 'A small deposit to book your start date. After that, every payment is tied to a finished stage of work that you can see with your own eyes. You never pay for work that has not been done.'),
     array('Will I get a written quote?', 'Always. After we visit and understand the job, you get a fixed, written quote that lists what is included. If something changes, we agree on it in writing before we do it.'),
-    array('How long will my renovation take?', 'It depends on the size. A bathroom is about 2 to 3 weeks, a kitchen 4 to 8 weeks, a basement 6 to 10 weeks and a full home 3 to 6 months. You get a written timeline before we start.'),
-    array('How much will it cost?', 'It depends on the size and the finishes you choose. Book a free consultation and we will give you an honest range on the spot, then a fixed written quote.'),
+    array('How long will my renovation take?', "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail."),
+    array('How much will it cost?', 'It depends on the size and the finishes you choose. Book a free estimate and we will give you an honest range on the spot, then a fixed written quote.'),
     array('Do I need to move out during the work?', 'For one room or a bathroom, usually not. For a major renovation, it can be easier to stay elsewhere for part of it. We plan the work around your family, kids and pets.'),
     array('What if I change my mind halfway?', 'Changes are welcome. Before any change, we tell you what it does to the price and the timeline, and we only go ahead once you agree in writing.'),
     array('Do you handle permits?', 'Yes. We prepare the drawings, apply for permits and book the inspections, so you do not have to deal with the city.'),
@@ -108,7 +108,7 @@ $FAQ = array(
     array('How do you deal with dust and mess?', 'We seal off the work area, protect your floors and furniture, and clean up at the end of every day. Your home should still feel like your home.'),
 );
 
-$AREAS = array('Toronto', 'North York', 'Etobicoke', 'Scarborough', 'East York', 'Vaughan', 'Richmond Hill', 'Markham', 'Thornhill', 'Mississauga', 'Oakville', 'Brampton', 'Aurora', 'Newmarket', 'Pickering', 'Ajax');
+$AREAS = array('Toronto', 'North York', 'Etobicoke', 'Scarborough', 'East York', 'Vaughan', 'Woodbridge', 'Richmond Hill', 'Markham', 'Thornhill', 'Mississauga', 'Oakville', 'Aurora', 'Newmarket');
 
 $PROCESS = array(
     array('01', 'Talk', 'A free visit to your home. We listen, measure and give you an honest price range before we leave.', 'stills/step-talk'),

@@ -50,8 +50,7 @@ echo plumb_line();
     </div>
     <div>
       <div class="reveal">
-        <p class="kicker">The plumb promise</p>
-        <h2 class="h2" style="margin-top:16px">Four things we put in writing.</h2>
+        <h2 class="h2">The way we work</h2>
         <?= dimline() ?>
       </div>
       <ol class="pl" style="margin-top:30px"><?php foreach ($PROMISES as $pr): ?><li><b><?= e($pr[0]) ?></b><span><?= e($pr[1]) ?></span></li><?php endforeach; ?></ol>

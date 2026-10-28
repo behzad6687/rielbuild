@@ -1,5 +1,5 @@
 <?php
-/* Consultation form handler. PHP 7.4+. Returns JSON for the fetch() form, redirects for no-JS posts.
+/* Estimate form handler. PHP 7.4+. Returns JSON for the fetch() form, redirects for no-JS posts.
    FORM_MODE 'demo' validates and succeeds without sending; 'mail' sends with PHP mail(). */
 require_once dirname(__DIR__) . '/inc/config.php';
 require_once dirname(__DIR__) . '/inc/data.php';
@@ -44,8 +44,8 @@ if ($name === '' || strlen(preg_replace('/\D/', '', $phone)) < 7 || !filter_var(
 $serviceName = isset($SERVICES[$service]) ? $SERVICES[$service]['name'] : ($service === 'other' ? 'Something else' : 'Not given');
 
 if (FORM_MODE === 'mail') {
-    $subject = 'New consultation request: ' . $serviceName;
-    $body = "New consultation request from the website\n\n"
+    $subject = 'New estimate request: ' . $serviceName;
+    $body = "New estimate request from the website\n\n"
         . "Name:    $name\nPhone:   $phone\nEmail:   $email\nProject: $serviceName\n\n"
         . "Message:\n" . ($message !== '' ? $message : '(none)') . "\n\n"
         . 'Sent ' . date('Y-m-d H:i') . ' from ' . (isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : 'unknown') . "\n";

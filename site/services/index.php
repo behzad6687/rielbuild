@@ -39,9 +39,9 @@ echo plumb_line();
       <h2 class="h2">Tell us about the space. We'll tell you straight.</h2>
       <?= dimline() ?>
       <p class="lede">Some jobs are one service. Most touch two or three: a kitchen that opens into the dining room, a basement that needs a bathroom. On the first visit we walk the house with you and give you an honest price range before we leave.</p>
-      <div class="btn-row" style="margin-top:10px"><a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation</a><a class="tlink" href="<?= e(url('process/')) ?>">How we work <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></div>
+      <div class="btn-row" style="margin-top:10px"><a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free estimate</a><a class="tlink" href="<?= e(url('process/')) ?>">How we work <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></div>
     </div>
-    <div class="split__media reveal"><?= pic('stills/step-talk', 'A first consultation at the kitchen table, plans and samples laid out', 1200, 990) ?></div>
+    <div class="split__media reveal"><?= pic('stills/step-talk', 'A first visit at the kitchen table, plans and samples laid out', 1200, 990) ?></div>
   </div>
 </section>
 

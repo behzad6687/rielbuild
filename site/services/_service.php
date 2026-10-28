@@ -26,7 +26,7 @@ $page = array(
 include dirname(__DIR__) . '/inc/header.php';
 echo plumb_line();
 $facts = '<div class="page-hero__facts"><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>Fixed, written quote</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Written timeline</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Written warranty</span></div>'
-    . '<div class="btn-row"><a class="btn btn--brass" href="' . e(url('contact/?service=' . $slug)) . '">Book a free consultation</a><a class="btn btn--ghost" href="tel:' . e(PHONE_TEL) . '"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>' . e(PHONE) . '</a></div>';
+    . '<div class="btn-row"><a class="btn btn--brass" href="' . e(url('contact/?service=' . $slug)) . '">Book a free estimate</a><a class="btn btn--ghost" href="tel:' . e(PHONE_TEL) . '"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>' . e(PHONE) . '</a></div>';
 ?>
 <main id="main" tabindex="-1">
 <?= page_hero($s['short'] . ' in the GTA', e($s['name']) . '<span class="brass">.</span>', $s['tag'], $s['img'], $page['crumbs'], $facts) ?>
@@ -50,7 +50,7 @@ $facts = '<div class="page-hero__facts"><span class="fact"><svg class="ico" aria
 <section class="sec on-dark">
   <div class="wrap">
     <div class="sec__head reveal">
-      <p class="kicker">The plumb promise</p>
+      <p class="kicker">The way we work</p>
       <h2 class="h2" style="margin-top:16px">What you get on every <?= e(strtolower($s['short'])) ?> job.</h2>
       <?= dimline() ?>
     </div>

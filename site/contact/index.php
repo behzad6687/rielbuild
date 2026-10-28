@@ -1,8 +1,8 @@
 <?php
 require dirname(__DIR__) . '/inc/boot.php';
 $page = array(
-    'title'  => 'Contact RIELBUILD | Book a Free Renovation Consultation in the GTA',
-    'desc'   => 'Book a free in-home consultation with RIELBUILD. Call 647-895-4555 or send the form. A project lead calls back within one business day.',
+    'title'  => 'Contact RIELBUILD | Book a Free Renovation Estimate in the GTA',
+    'desc'   => 'Book a free in-home estimate with RIELBUILD. Call 647-895-4555 or send the form. A project lead calls back within one business day.',
     'path'   => 'contact/',
     'crumbs' => array(array('Contact', 'contact/')),
     'schema' => array(array('@context' => 'https://schema.org', '@type' => 'ContactPage', 'name' => 'Contact RIELBUILD', 'url' => abs_url('contact/'))),
@@ -12,7 +12,7 @@ echo plumb_line();
 $sentFlag = isset($_GET['sent']);
 ?>
 <main id="main" tabindex="-1">
-<?= page_hero('Contact', 'Let\'s talk about <span class="brass">your home.</span>', 'Book a free consultation. We visit, listen, measure and give you an honest price range before we leave.', 'stills/step-talk', $page['crumbs']) ?>
+<?= page_hero('Contact', 'Let\'s talk about <span class="brass">your home.</span>', 'Book a free estimate. We visit, listen, measure and give you an honest price range before we leave.', 'stills/step-talk', $page['crumbs']) ?>
 
 <section class="sec">
   <div class="wrap contact-grid">

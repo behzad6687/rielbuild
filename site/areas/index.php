@@ -36,7 +36,7 @@ echo plumb_line();
     <div class="cards stagger">
       <div class="card"><span class="card__ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-basement"/></svg></span><h3 class="h3">Basements in Vaughan, Markham and Richmond Hill</h3><p>Family rooms, guest suites and home gyms, with moisture checks and permits handled. <a class="tlink" href="<?= e(url('services/basement-finishing/')) ?>">Basement finishing</a></p></div>
       <div class="card"><span class="card__ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-kitchen"/></svg></span><h3 class="h3">Kitchens across Toronto and Etobicoke</h3><p>Open-concept layouts, custom cabinetry and new lighting in older homes. <a class="tlink" href="<?= e(url('services/kitchen-renovation/')) ?>">Kitchen renovation</a></p></div>
-      <div class="card"><span class="card__ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-bath"/></svg></span><h3 class="h3">Bathrooms in North York and Mississauga</h3><p>Walk-in showers, heated floors and proper waterproofing, done in weeks. <a class="tlink" href="<?= e(url('services/bathroom-renovation/')) ?>">Bathroom renovation</a></p></div>
+      <div class="card"><span class="card__ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-bath"/></svg></span><h3 class="h3">Bathrooms in North York and Mississauga</h3><p>Walk-in showers, heated floors and proper waterproofing. <a class="tlink" href="<?= e(url('services/bathroom-renovation/')) ?>">Bathroom renovation</a></p></div>
     </div>
   </div>
 </section>

@@ -6,7 +6,11 @@ The single source for the rebuild. Copy below ships verbatim. Band ranges are st
 
 **Plumb.** A builder's word for true vertical: a line that is dead straight, checked with a weight on a string. RIELBUILD builds plumb, in the walls and in the way it deals with people: a written fixed quote, payments tied to finished work, one project lead who picks up the phone, and a clean site every day. Every section on the site teaches and sells that one idea. The signature element is a brass plumb line that hangs down the page and settles true at each section. The one interactive moment asks the visitor to hold a swinging plumb bob still until it reads true.
 
-## 2. Palette (warm and crafted, sampled from the dusk-to-lamplight footage)
+## 2. Palette
+
+Revised at the client's request to match the original rielbuild.ca: orange #FB4500 accent (white bold text on buttons), dark greys #222 to #2F2F2F replacing every green, very light grey #F4F4F4 canvas replacing beige. The original warm plaster/forest/brass palette below is superseded.
+
+### Original palette (superseded)
 
 ```css
 :root{

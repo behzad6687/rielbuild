@@ -42,8 +42,8 @@ echo plumb_line();
     <div class="stat-row stagger">
       <div class="stat"><b>4</b><span>Core renovation services</span></div>
       <div class="stat"><b>1</b><span>Project lead per job</span></div>
-      <div class="stat"><b>16+</b><span>GTA communities served</span></div>
-      <div class="stat"><b>$0</b><span>For your first consultation</span></div>
+      <div class="stat"><b>14</b><span>GTA communities served</span></div>
+      <div class="stat"><b>$0</b><span>For your estimate</span></div>
     </div>
   </div>
 </section>

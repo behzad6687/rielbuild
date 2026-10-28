@@ -43,7 +43,7 @@ function page_hero($kicker, $title, $lede, $img, $crumbs = array(), $extra = '')
 <?php return ob_get_clean();
 }
 
-function consult_form($id = 'quote', $heading = 'Book a free consultation', $sub = 'Tell us a little about the job. A project lead calls you back within one business day.')
+function consult_form($id = 'quote', $heading = 'Book a free estimate', $sub = 'Tell us a little about the job. A project lead calls you back within one business day.')
 {
     global $SERVICES;
     ob_start(); ?>
@@ -65,7 +65,7 @@ function consult_form($id = 'quote', $heading = 'Book a free consultation', $sub
     <div class="field field--full"><label for="<?= e($id) ?>-msg">About the project <small>(optional)</small></label><textarea id="<?= e($id) ?>-msg" name="message" maxlength="2000" placeholder="Which rooms, rough timing, anything we should know."></textarea></div>
     <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company_site" type="text" tabindex="-1" autocomplete="off"></label></div>
     <input type="hidden" name="ts" value="<?= time() ?>">
-    <button class="btn btn--brass" type="submit">Book my free consultation <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
+    <button class="btn btn--brass" type="submit">Book my free estimate <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></button>
     <p class="form__note">No pressure, no obligation. We never share your details.</p>
   </form>
   <div class="sent" role="status">
@@ -102,5 +102,6 @@ function cta_band($img = 'hero-ending')
 
 function plumb_line()
 {
-    return '<div class="plumb" aria-hidden="true"><span class="plumb__line"><svg class="plumb__bob" viewBox="0 0 16 26"><path d="M8 0v6" stroke="currentColor" stroke-width="1.2"/><path d="M8 6c-3.4 0-6 2.7-6 5.5C2 14.2 8 26 8 26s6-11.8 6-14.5C14 8.7 11.4 6 8 6z" fill="currentColor"/></svg></span></div>';
+    /* The moving plumb line was removed at the client's request (distracting). Kept as a no-op so pages need no edits. */
+    return '';
 }

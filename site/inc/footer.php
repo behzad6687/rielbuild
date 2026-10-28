@@ -8,7 +8,7 @@
           <span class="brand__text"><b>RIEL<span>BUILD</span></b><small>Renovation &amp; Remodelling</small></span>
         </a>
         <p class="foot__line">Home renovations across the Greater Toronto Area. Straight lines, straight talk.</p>
-        <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free consultation</a>
+        <a class="btn btn--brass" href="<?= e(url('contact/')) ?>">Book a free estimate</a>
       </div>
       <div class="foot__col">
         <p class="foot__h">Services</p>
@@ -64,7 +64,7 @@
         <summary><span class="sgroup__chip"><img data-src="<?= e(url('assets/img/stills/planning-sm.webp')) ?>" alt="" width="48" height="48"></span><span>About</span><svg class="ico ico--chev" aria-hidden="true" focusable="false"><use href="#i-chev"/></svg></summary>
         <div class="sgroup__body">
           <a href="<?= e(url('about/')) ?>">Who we are</a>
-          <a href="<?= e(url('process/')) ?>#promise">The plumb promise</a>
+          <a href="<?= e(url('process/')) ?>#promise">The way we work</a>
           <a href="<?= e(url('areas/')) ?>">Where we work</a>
           <a href="<?= e(url('faq/')) ?>">Straight answers</a>
         </div>
@@ -74,7 +74,7 @@
       <a class="sgroup sgroup--link" href="<?= e(url('contact/')) ?>"><span class="sgroup__chip sgroup__chip--ico"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span><span>Contact</span><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="sheet__foot">
-      <a class="btn btn--brass btn--block" href="<?= e(url('contact/')) ?>">Book a free consultation</a>
+      <a class="btn btn--brass btn--block" href="<?= e(url('contact/')) ?>">Book a free estimate</a>
       <a class="btn btn--ghost btn--block" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><?= e(PHONE) ?></a>
     </div>
   </div>
