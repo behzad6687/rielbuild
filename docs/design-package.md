@@ -8,7 +8,7 @@ The single source for the rebuild. Copy below ships verbatim. Band ranges are st
 
 ## 2. Palette
 
-Revised at the client's request to match the original rielbuild.ca: orange #FB4500 accent (white bold text on buttons), dark greys #222 to #2F2F2F replacing every green, very light grey #F4F4F4 canvas replacing beige. The original warm plaster/forest/brass palette below is superseded.
+Revised at the client's request to match the original rielbuild.ca: orange #FB4500 accent (white bold text on buttons), dark greys #222 to #2F2F2F replacing every green, very light grey #F4F4F4 canvas replacing beige. Second revision: white theme everywhere like the original site (header, menus, sections, CTA band, inner page heroes and footer are all white or very light grey); only the scroll film keeps dark scrims so captions over the footage stay readable. The original warm plaster/forest/brass palette below is superseded.
 
 ### Original palette (superseded)
 

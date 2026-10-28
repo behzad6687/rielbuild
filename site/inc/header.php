@@ -50,7 +50,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
 <?php else: ?><meta name="robots" content="index, follow, max-image-preview:large">
 <?php endif; ?>
 <link rel="canonical" href="<?= e($canonical) ?>">
-<meta name="theme-color" content="#2F2F2F">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="format-detection" content="telephone=no">
 <meta name="geo.region" content="CA-ON">
 <meta name="geo.placename" content="Toronto">
@@ -68,7 +68,7 @@ if (!empty($page['schema'])) foreach ($page["schema"] as $sch) $ld[] = $sch;
 <meta name="twitter:title" content="<?= e($p_title) ?>">
 <meta name="twitter:description" content="<?= e($p_desc) ?>">
 <meta name="twitter:image" content="<?= e(abs_url('assets/' . $p_og)) ?>">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23222222'/%3E%3Cpath d='M9 22 24 10l15 12' fill='none' stroke='%23FB4500' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 15v13' stroke='%23F4F4F4' stroke-width='1.6'/%3E%3Cpath d='M24 27c-2.8 0-4.8 2.2-4.8 4.4 0 2 4.8 8.8 4.8 8.8s4.8-6.8 4.8-8.8c0-2.2-2-4.4-4.8-4.4z' fill='%23FB4500'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='11' fill='%23FFFFFF'/%3E%3Cpath d='M9 22 24 10l15 12' fill='none' stroke='%23FB4500' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 15v13' stroke='%23222222' stroke-width='1.6'/%3E%3Cpath d='M24 27c-2.8 0-4.8 2.2-4.8 4.4 0 2 4.8 8.8 4.8 8.8s4.8-6.8 4.8-8.8c0-2.2-2-4.4-4.8-4.4z' fill='%23FB4500'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="<?= e(url('assets/img/brand/apple-touch-icon.png')) ?>">
 <link rel="preload" href="<?= e(url('assets/fonts/bricolage-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="<?= e(url('assets/fonts/public-sans-latin.woff2')) ?>" as="font" type="font/woff2" crossorigin>

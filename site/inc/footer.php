@@ -42,7 +42,7 @@
 <nav class="thumbbar" aria-label="Quick actions">
   <a class="thumbbar__item" href="tel:<?= e(PHONE_TEL) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Call</span></a>
   <a class="thumbbar__item" href="<?= e(url('services/')) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-house"/></svg><span>Services</span></a>
-  <a class="thumbbar__item thumbbar__item--cta" href="<?= e(url('contact/')) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg><span>Free quote</span></a>
+  <a class="thumbbar__item thumbbar__item--cta" href="<?= e(url('contact/')) ?>"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg><span>Free estimate</span></a>
   <button class="thumbbar__item" type="button" data-sheet-open="menu-sheet" aria-haspopup="dialog"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><span>Menu</span></button>
 </nav>
 

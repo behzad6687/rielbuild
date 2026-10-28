@@ -51,7 +51,7 @@ $facts = '<div class="page-hero__facts"><span class="fact"><svg class="ico" aria
   <div class="wrap">
     <div class="sec__head reveal">
       <p class="kicker">The way we work</p>
-      <h2 class="h2" style="margin-top:16px">What you get on every <?= e(strtolower($s['short'])) ?> job.</h2>
+      <h2 class="h2" style="margin-top:16px">What you get on every job.</h2>
       <?= dimline() ?>
     </div>
     <div class="cards stagger" style="grid-template-columns:repeat(2,1fr)">
