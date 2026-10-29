@@ -530,3 +530,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
   .dim path,.steps__line path{stroke-dashoffset:0}
   .page-hero__bg{transform:none}
 }
+
+.foot__credit{flex-basis:100%;margin-top:4px;font-size:13px;color:var(--on-dark-3)}
+.foot__credit a{color:var(--text-2);border-bottom:1px solid var(--accent-muted)}
+.foot__credit a:hover{color:var(--accent-deep);border-color:var(--accent)}

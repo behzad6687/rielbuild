@@ -35,6 +35,7 @@
     <div class="foot__bottom">
       <p>&copy; <?= date('Y') ?> <?= e(SITE_LEGAL) ?>. All rights reserved.</p>
       <p class="foot__note">Project imagery on this site is illustrative.</p>
+      <p class="foot__credit">Website designed and developed by <a href="https://esolutify.com/" target="_blank" rel="nofollow noopener">eSolutify</a></p>
     </div>
   </div>
 </footer>

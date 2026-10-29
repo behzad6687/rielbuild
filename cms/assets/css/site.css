@@ -589,3 +589,7 @@ body.paused *,body.paused *::before,body.paused *::after{animation-play-state:pa
 .prose--page ul,.prose--page ol{padding-left:22px;display:grid;gap:8px;color:var(--text-2)}
 .prose--page ul{list-style:disc}.prose--page ol{list-style:decimal}
 .muted{color:var(--text-3)}
+
+.foot__credit{flex-basis:100%;margin-top:4px;font-size:13px;color:var(--on-dark-3)}
+.foot__credit a{color:var(--text-2);border-bottom:1px solid var(--accent-muted)}
+.foot__credit a:hover{color:var(--accent-deep);border-color:var(--accent)}

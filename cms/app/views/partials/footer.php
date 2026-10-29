@@ -57,6 +57,7 @@ $chip = static function (array $it, string $fallback): string {
     <div class="foot__bottom">
       <p>&copy; <?= e(Time::nowLocal()->format('Y')) ?> <?= e(site('org.legal_name') ?: siteName()) ?>. All rights reserved.<?php foreach ($legal as $it): if (!$it['path']) continue; ?> <a href="<?= e((string)$it['path']) ?>"><?= e($it['label']) ?></a><?php endforeach; ?></p>
       <?php if (($note = site('footer.note')) !== ''): ?><p class="foot__note"><?= e($note) ?></p><?php endif; ?>
+      <p class="foot__credit">Website designed and developed by <a href="https://esolutify.com/" target="_blank" rel="nofollow noopener">eSolutify</a></p>
     </div>
   </div>
 </footer>
