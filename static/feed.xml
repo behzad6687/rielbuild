@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>RIELBUILD Blog</title>
+  <link>https://rielbuild.ca/blog/</link>
+  <atom:link href="https://rielbuild.ca/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Renovation advice from RIELBUILD: kitchens, bathrooms, basements and full home renovations across the GTA.</description>
+  <language>en-ca</language>
+  <lastBuildDate>Tue, 20 Oct 2026 13:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Planning a kitchen renovation in the GTA: 8 questions to answer first</title>
+    <link>https://rielbuild.ca/blog/kitchen-renovation-questions-to-answer-first/</link>
+    <guid isPermaLink="true">https://rielbuild.ca/blog/kitchen-renovation-questions-to-answer-first/</guid>
+    <pubDate>Tue, 20 Oct 2026 13:00:00 +0000</pubDate>
+    <description>Before you pick a single tile, answer these eight questions. They decide your budget, your timeline and how much you will love the finished kitchen.</description>
+  </item>
+  <item>
+    <title>Finishing your basement: what to check before you start</title>
+    <link>https://rielbuild.ca/blog/finishing-your-basement-what-to-check-first/</link>
+    <guid isPermaLink="true">https://rielbuild.ca/blog/finishing-your-basement-what-to-check-first/</guid>
+    <pubDate>Thu, 08 Oct 2026 13:00:00 +0000</pubDate>
+    <description>A finished basement should feel as dry, warm and bright as the rest of the house. These are the checks that make that possible.</description>
+  </item>
+  <item>
+    <title>How payments should work on a renovation, and why it matters</title>
+    <link>https://rielbuild.ca/blog/how-renovation-payments-should-work/</link>
+    <guid isPermaLink="true">https://rielbuild.ca/blog/how-renovation-payments-should-work/</guid>
+    <pubDate>Thu, 24 Sep 2026 13:00:00 +0000</pubDate>
+    <description>A small deposit, then payments tied to finished stages. Here is why that simple structure protects you, and what to look for in a quote.</description>
+  </item>
+</channel>
+</rss>

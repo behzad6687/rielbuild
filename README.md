@@ -44,6 +44,15 @@ Per-page titles and descriptions (with length checks and a duplicate-title check
 
 Not required: scheduled posts go live on their own. For nightly database backups, add a cron job every 5 minutes: `php /path/to/site/app/cron/run.php` (System shows the exact path).
 
+## Windows hosting without PHP (`static/`)
+
+rielbuild.ca's host (MSPControl, IIS) offers ASP.NET but no PHP, so `static/` is the finished site exported to plain HTML: every page, the three blog posts, the sitemap, robots.txt and the RSS feed (`/feed.xml`), with the same SEO tags and structured data as the CMS. There is no admin; wording changes are made in the CMS and exported again.
+
+- **Upload:** the contents of `static/` go into the site's home folder (ASP.NET 4.0, Integrated).
+- **Estimate form:** posts to `forms/contact.ashx`, which checks the fields, drops obvious spam, emails the request and keeps a copy in `App_Data\estimate-requests.log`. Mail settings (recipient, SMTP server, login) are at the top of `web.config`; send failures are written to `App_Data\mail-errors.log`. The site needs write access to `App_Data` for the copies.
+- **Old addresses:** `contact.html`, `design-build.html`, `remodeling-renovation.html`, `riel-construction.html` and `kitchen-bath/` from the previous site send visitors to their new pages (301).
+- **Export again** after changing the CMS: install it locally in live mode (`php app/cli.php install --url=https://rielbuild.ca --live=https://rielbuild.ca ...`), serve it with `php -S 127.0.0.1:8096` and a router that sends unknown paths to `index.php`, then run `python3 tools/export_static.py http://127.0.0.1:8096 <cms folder> static`. The form handler and `web.config` live in `static-src/` and are copied in.
+
 ## The static demo (`site/`)
 
 ## Deploy to cPanel (HostPapa)
