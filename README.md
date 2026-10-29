@@ -18,6 +18,8 @@ A cinematic, scroll-driven redesign of rielbuild.ca, in two versions:
 
 Leave "This is the real, public website" unticked for a demo: every page then tells search engines not to index it. On the real domain, tick it (or set `live_url` in `app/config.local.php` to the site address) and remove the `#` from the HTTPS lines in `.htaccess` once the SSL certificate works.
 
+**Windows / IIS hosting** (Plesk on Windows, MSPControl, WebsitePanel): IIS ignores `.htaccess`, so the package also ships a `web.config` with the same rules. The server needs PHP 8.1+ enabled for the site and the IIS URL Rewrite module, and the site's application pool must be allowed to write to `app/`, `storage/` and `uploads/` (the installer writes `app/config.local.php`). Once SSL works, set `enabled="true"` on the "Force HTTPS" rule in `web.config`.
+
 ### What the client edits in the admin
 
 | Screen | What it edits |
