@@ -196,7 +196,9 @@
       if (!doneFlag && hold._vis) hRaf = requestAnimationFrame(loop); else { hRaf = null; hLast = 0; }
     };
     var kick = function () { if (!hRaf && !doneFlag) hRaf = requestAnimationFrame(loop); };
-    var start = function (e) { if (doneFlag) return; if (e && e.cancelable) e.preventDefault(); holding = true; kick(); };
+    /* a finger held still fills it; a swipe scrolls the page as usual (touch-action: pan-y) and the
+       browser's pointercancel ends the hold. Mouse and keyboard presses keep their default blocked. */
+    var start = function (e) { if (doneFlag) return; if (e && e.cancelable && e.pointerType !== 'touch') e.preventDefault(); holding = true; kick(); };
     var stop = function () { holding = false; kick(); };
     hold.addEventListener('pointerdown', start);
     hold.addEventListener('pointerup', stop);
