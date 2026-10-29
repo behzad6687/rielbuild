@@ -1,3 +1,8 @@
 review/
 *.zip
 .DS_Store
+cms/app/config.local.php
+cms/storage/*
+!cms/storage/.htaccess
+cms/uploads/*
+!cms/uploads/.htaccess

@@ -1,0 +1,16 @@
+{
+  "name": "Website admin",
+  "short_name": "Admin",
+  "description": "Edit the website: pages, blog posts, photos, menus and estimate requests.",
+  "start_url": "/admin/",
+  "scope": "/admin/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f4f4",
+  "theme_color": "#222222",
+  "icons": [
+    { "src": "/admin/assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/admin/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/admin/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

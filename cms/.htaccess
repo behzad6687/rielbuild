@@ -1,0 +1,121 @@
+# =============================================================================
+# RIELBUILD website (Apache or LiteSpeed). Upload to the top folder of a domain
+# or subdomain. Security headers are sent from PHP.
+# =============================================================================
+
+Options -Indexes -MultiViews
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Once the site has an SSL certificate, remove the # from the next three lines
+  # to send every visitor to https:// (do not do it before, or the site stops loading).
+  # RewriteCond %{HTTPS} !=on
+  # RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # The real entry points pass straight through (no rewrite loop).
+  RewriteRule ^(index\.php|admin/index\.php|install/index\.php)$ - [L]
+
+  # Application internals are never reachable: app/, storage/ and vendor/ each
+  # carry a deny-all .htaccess, RedirectMatch below answers 404, and the PHP
+  # router refuses the prefixes too.
+
+  # Admin: static assets are plain files; everything else goes to the admin controller.
+  RewriteRule ^admin/assets/ - [L]
+  RewriteRule ^admin(/.*)?$ admin/index.php [L,QSA]
+
+  # Installer: a real folder; unknown sub-paths go to its index.php.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^install(/.*)?$ install/index.php [L,QSA]
+
+  # Everything that is not a real file or folder goes to the front controller.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Keep internals and secrets out of the web
+# -----------------------------------------------------------------------------
+RedirectMatch 404 ^/(app|storage|vendor)(/|$)
+RedirectMatch 404 ^/composer\.(json|lock)$
+
+<FilesMatch "\.(sqlite|sqlite3|db|log|md|sql|gz|lock|ini|yml|yaml|bak|dist|env)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+<FilesMatch "^(composer\.json|composer\.lock|config\.local\.php|config\.local\.example\.php|version\.php|README\.txt)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+</FilesMatch>
+
+# -----------------------------------------------------------------------------
+# Types
+# -----------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType font/woff2 .woff2
+  AddType video/mp4 .mp4
+  AddType text/calendar .ics
+  AddType application/manifest+json .webmanifest
+  AddCharset UTF-8 .html .css .js .xml .json .svg .webmanifest
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Compression: text types only. Never mp4, images or fonts, so the scroll
+# film's Content-Length survives for its loading ring.
+# -----------------------------------------------------------------------------
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Request_URI "\.(mp4|jpe?g|png|webp|avif|woff2|gif|ico|pdf|zip)$" no-gzip dont-vary
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml text/javascript text/calendar
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml image/svg+xml application/manifest+json
+</IfModule>
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript text/xml
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# Caching. Assets are versioned with ?v= (asset()), so they are cached for a
+# year. HTML is never cached here: PHP sends no-cache (spec 1.5.3).
+# -----------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                          "access plus 1 week"
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/avif                "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 month"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
+  ExpiresByType application/pdf           "access plus 1 month"
+  ExpiresByType application/manifest+json "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  <FilesMatch "\.(webp|avif|jpe?g|png|svg|css|js|woff2|mp4)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+ErrorDocument 404 /index.php

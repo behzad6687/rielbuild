@@ -1,9 +1,48 @@
-# RIELBUILD website redesign (demo)
+# RIELBUILD website redesign
 
-A cinematic, scroll-driven redesign of rielbuild.ca. Plain PHP 7.4+, HTML, CSS and vanilla JS. No framework, no database, no admin panel.
+A cinematic, scroll-driven redesign of rielbuild.ca, in two versions:
 
-- `site/`: the deployable website (upload the contents of this folder)
+- `cms/`: **the website with its admin panel** (PHP 8.1+, SQLite). Built on the ICM / NHF admin framework. This is the version to deploy.
+- `site/`: the original static demo (PHP 7.4+, no database, no admin), kept for reference.
 - `docs/design-package.md`: the approved creative plan (story, palette, type, band map)
+
+## The CMS version (`cms/`)
+
+### Install
+
+1. Create a domain or subdomain for it (for example `rielbuild.example.com`). It must sit at the top of its domain, not in a sub-folder.
+2. Choose PHP 8.1, 8.2 or 8.3 for that domain. It needs the pdo_sqlite, gd and mbstring extensions (on by default on most hosts). No MySQL database is needed.
+3. Upload `rielbuild-cms.zip` into the domain's folder and extract it, so `index.php` sits directly inside it.
+4. Open `https://your-domain/install/`, fill in the one form (your name, email, a password of 12 or more characters) and press **Set up the website**. It creates the database with every page, photo, menu, FAQ, project and three starter blog posts.
+5. Sign in at `https://your-domain/admin/`.
+
+Leave "This is the real, public website" unticked for a demo: every page then tells search engines not to index it. On the real domain, tick it (or set `live_url` in `app/config.local.php` to the site address) and remove the `#` from the HTTPS lines in `.htaccess` once the SSL certificate works.
+
+### What the client edits in the admin
+
+| Screen | What it edits |
+|---|---|
+| Pages and SEO | Every page: page name, main heading (H1), introduction, body, **all wording and photos of each section** ("Page wording and images"), SEO title, meta description, social image, search-engine visibility, web address (old addresses redirect), extra blocks (text, cards, questions, buttons, images, tables). "Add a page" makes a text page or a new service (it joins the Services menu, footer, home page and estimate form by itself). |
+| Blog posts | Write, schedule and publish posts: headline, address, summary, body (rich text with headings, links, lists), featured photo with alt text, photo gallery, category (a service links the post to that service page), tags (related posts), SEO title and description with a live Google preview and an SEO score. |
+| Menus | The header menu (with the Services mega panel), the phone menu and the two footer columns: add, reorder (drag and drop), hide, rename, link to a page or any address, icons and photos. |
+| FAQs | Questions for the FAQ page, each service page and the home page. |
+| Projects | The gallery on Projects and the home page, with filter buttons. |
+| Media | Every photo: upload (resized automatically to WebP and JPEG in four sizes), alt text, focal point, where it is used. |
+| Inbox | Every estimate request from the site's forms, also emailed to the addresses in Settings. |
+| Redirects | 301 redirects and the list of addresses visitors could not find. |
+| Settings | Business name, phone, email, hours, social links, the estimate band and form wording, search defaults, how email is sent, form recipients, security, maintenance mode. |
+| Users | Accounts and roles (owner, manager, editor), optional two-step sign-in. |
+| System | Health, backups (download), database updates. |
+
+### SEO built in
+
+Per-page titles and descriptions (with length checks and a duplicate-title check), canonical links, Open Graph and Twitter cards, one JSON-LD graph per page (GeneralContractor with hours, areas and services; WebSite; BreadcrumbList; Service; FAQPage; HowTo; BlogPosting; Blog), an XML sitemap with images (`/sitemap.xml`), `robots.txt`, an RSS feed (`/feed/`), breadcrumbs, exactly one H1 per page, responsive WebP images with width and height, and internal links between services, blog posts (by category and tags), FAQs and service areas.
+
+### Optional cron job
+
+Not required: scheduled posts go live on their own. For nightly database backups, add a cron job every 5 minutes: `php /path/to/site/app/cron/run.php` (System shows the exact path).
+
+## The static demo (`site/`)
 
 ## Deploy to cPanel (HostPapa)
 

@@ -1,0 +1,63 @@
+/* ICM Tennis admin: the Menus screen (V2-PLAN 4 WP-B; linked with admin_style('menus.css')). Owner: WP-B.
+   Admin tokens only (admin.css), so the screen follows the shell's light theme. */
+.menu-where { margin: 0 0 12px; font-weight: 600; }
+.menu-help { margin: 12px 0 4px; }
+.menu-sortmsg:empty { display: none; }
+.menu-sortmsg { margin: 0 0 8px; font-weight: 600; }
+
+.menu-tree { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.menu-tree .menu-tree { margin: 8px 0 0 22px; padding-left: 12px; border-left: 2px solid var(--hairline); }
+.menu-row__card { display: grid; grid-template-columns: auto auto minmax(0, 1fr); gap: 8px 12px; align-items: start; padding: 10px 12px;
+  background: var(--line); border: 1px solid var(--hairline); border-left: 4px solid var(--border-ui); border-radius: var(--r); }
+.menu-tree .menu-tree .menu-row__card { border-left-color: var(--court); }
+.menu-row.is-hidden > .menu-row__card { opacity: .72; border-style: dashed; }
+.menu-row.is-dragging > .menu-row__card { outline: 2px dashed var(--court); outline-offset: 2px; }
+.menu-row__grip { width: 12px; align-self: stretch; cursor: grab; border-radius: 3px;
+  background: radial-gradient(circle, var(--border-ui) 1.2px, transparent 1.6px) 0 0 / 6px 6px; opacity: .8; }
+.menu-row__thumb { width: 48px; height: 48px; object-fit: cover; border-radius: var(--r); background: var(--chalk-2); border: 1px solid var(--hairline); }
+.menu-row__thumb--none { display: inline-block; }
+.menu-row__text { min-width: 0; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.menu-row__label { font-weight: 700; display: inline-flex; align-items: center; min-height: 32px; overflow-wrap: anywhere; }
+.menu-row__target { color: var(--text-2); font-size: .88rem; overflow-wrap: anywhere; }
+.menu-row__problem, .menu-row__preview { flex-basis: 100%; margin: 2px 0 0; font-size: .9rem; }
+.menu-row__preview { color: var(--text-2); }
+.menu-row__tools { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+.menu-row__tools .inline-form { margin: 0; }
+@media (min-width: 900px) {
+  .menu-row__card { grid-template-columns: auto auto minmax(0, 1fr) auto; }
+  .menu-row__tools { grid-column: auto; justify-content: flex-end; }
+}
+/* Phones: a light indent so deep groups keep their width; no drag grip (the arrows move items on touch). */
+@media (max-width: 600px) {
+  .menu-tree .menu-tree { margin-left: 4px; padding-left: 8px; }
+  .menu-row__card { grid-template-columns: auto minmax(0, 1fr); gap: 6px 10px; padding: 8px 10px; }
+  .menu-row__grip { display: none; }
+  .menu-row__thumb { width: 40px; height: 40px; }
+  .menu-row__tools .btn { min-height: 44px; }
+}
+
+.menu-panel { border: 1px solid var(--hairline); border-radius: var(--r); padding: 10px 12px 4px; margin: 0 0 12px; }
+.menu-panel legend { font-weight: 700; padding: 0 4px; }
+.menu-opts { display: grid; gap: 0 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); align-items: start; }
+.menu-opts .checks-row { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0 16px; border: 0; padding: 0; margin: 0 0 8px; }
+.menu-opts [hidden], .menu-panel[hidden] { display: none; }
+.menu-preview { margin: 12px 0 0; padding: 10px 12px; border-radius: var(--r); background: var(--chalk-2); border: 1px solid var(--hairline); font-weight: 600; }
+
+.menu-settings summary { cursor: pointer; list-style: none; }
+.menu-settings summary h2 { display: inline; margin: 0; }
+.menu-settings[open] summary { margin-bottom: 12px; }
+
+.menu-switch__cols { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+.menu-switch h3 { font-size: 1rem; margin: 0 0 6px; }
+
+.menu-defaults { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.menu-defaults li { margin-left: calc(var(--depth, 0) * 22px); }
+
+.menu-thumbprev { list-style: none; margin: 0; padding: 8px; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px;
+  max-width: 390px; background: var(--ink); color: var(--line); border-radius: var(--r-lg); }
+.menu-thumbprev li { display: grid; justify-items: center; gap: 4px; font-size: .78rem; text-align: center; min-height: 48px; }
+.menu-thumbprev__icon { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--court); font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-row__card { transition: none; }
+}
