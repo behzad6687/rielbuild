@@ -16,15 +16,15 @@ final class Headers
     }
 
     /**
-     * Third-party hosts the public policy always allows (round 2, WP-C): the JotForm embed script and the
-     * JotForm, Google Maps and YouTube frames. Analytics and ad hosts are no longer fixed: they come from
-     * Integrations::cspSources() while those providers are switched on (ADMIN-AUDIT 4.10).
+     * Third-party hosts the public policy always allows (round 2, WP-C): the eSolutify AI chat widget
+     * (script, its API, logo and chat frame) and the Google Maps and YouTube frames. Analytics and ad hosts
+     * are not fixed: they come from Integrations::cspSources() while those providers are switched on.
      */
     public const FIXED = [
-        'script'  => [],
-        'connect' => [],
-        'img'     => [],
-        'frame'   => ['https://www.google.com', 'https://www.youtube-nocookie.com'],
+        'script'  => ['https://esolutify.com'],
+        'connect' => ['https://esolutify.com'],
+        'img'     => ['https://esolutify.com'],
+        'frame'   => ['https://esolutify.com', 'https://www.google.com', 'https://www.youtube-nocookie.com'],
     ];
 
     /**

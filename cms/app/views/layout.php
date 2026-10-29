@@ -67,6 +67,7 @@ $name = siteName();
 </main>
 <?php $view->partial('footer'); ?>
 <script src="<?= e(asset('js/site.js')) ?>" defer></script>
+<?php if (!$view->isPreview()): ?><script src="https://esolutify.com/adkit/widget.js" data-client="rielbuild" async></script><?php endif; ?>
 <?= $view->footHtml() ?>
 </body>
 </html>
