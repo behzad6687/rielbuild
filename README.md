@@ -28,7 +28,7 @@ The site detects its own folder, so it also works in any other folder or at a do
 
 1. Upload the same files to the domain root.
 2. In `config.php`: `NOINDEX` to `false`, `SITE_URL_OVERRIDE` to `https://rielbuild.ca`, `FORM_MODE` to `mail`.
-3. Confirm the business facts on the site with the client (service areas, hours, warranty wording, timelines).
+3. Confirm the business facts on the site with the client (service areas, hours, timelines).
 4. Replace illustrative images in `site/assets/img/stills/` with real project photos (same file names: `name.jpg`, `name.webp`, `name-sm.webp`) and remove the footer note in `site/inc/footer.php`.
 5. Submit `https://rielbuild.ca/sitemap.xml` in Google Search Console.
 

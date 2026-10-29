@@ -46,8 +46,8 @@ echo plumb_line();
       <div class="band band--l fx-depth" data-a="0.18" data-b="0.36" data-fx="depth" style="--sa:.84">
         <div class="band__in">
           <p class="kicker">The first promise</p>
-          <h2 class="band__h" data-split>No vanishing after the deposit.</h2>
-          <p class="band__p band__sub">A written, fixed quote. Payments tied to finished work.</p>
+          <h2 class="band__h" data-split>No delay after the deposit.</h2>
+          <p class="band__p band__sub">We'll get to work right away. Subsequent payments tied to finished work.</p>
         </div>
       </div>
       <div class="band band--l fx-snap" data-a="0.47" data-b="0.63" data-fx="snap" style="--sa:.86" data-ramp="0.034">

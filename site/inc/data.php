@@ -22,7 +22,7 @@ $SERVICES = array(
         'time' => "It depends on the size and requirements. When we visit you for your free estimate, we'll discuss the timeline in detail.",
         'faq' => array(
             array('Do we need to move out?', 'For a full gut renovation, usually yes, for part of the job. For a few rooms at a time, most families stay. We plan the order of work around how you live.'),
-            array('Can we renovate in phases?', 'Yes. Many clients do the kitchen and main floor first, then the basement or bathrooms the next year. We design it as one plan so the phases fit together.'),
+            array('Can we renovate in phases?', 'Yes, a first phase may include the kitchen and main floor for example, then the basement or bathrooms can be done as a second phase, and so on. We design it as one plan with phases that work best for you.'),
         ),
     ),
     'kitchen-renovation' => array(
@@ -114,7 +114,7 @@ $PROCESS = array(
     array('01', 'Talk', 'A free visit to your home. We listen, measure and give you an honest price range before we leave.', 'stills/step-talk'),
     array('02', 'Design and quote', 'We plan the layout and finishes with you, then hand you a fixed, written quote and timeline.', 'stills/step-design'),
     array('03', 'Build', 'One project lead runs the job. The site is protected, tidy every evening, and you always know what is next.', 'stills/step-build'),
-    array('04', 'Walk through', 'We walk the finished space together, fix anything on the list, and hand over a written warranty.', 'stills/step-walk'),
+    array('04', 'Walkthrough', "We walk the finished space together, check everything on the list, and ensure you're happy so far.", 'stills/step-walk'),
 );
 
 $PROMISES = array(

@@ -25,7 +25,7 @@ $page = array(
 );
 include dirname(__DIR__) . '/inc/header.php';
 echo plumb_line();
-$facts = '<div class="page-hero__facts"><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>Fixed, written quote</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Written timeline</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>Written warranty</span></div>'
+$facts = '<div class="page-hero__facts"><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>Fixed, written quote</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-clock"/></svg>Written timeline</span><span class="fact"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>One project lead</span></div>'
     . '<div class="btn-row"><a class="btn btn--brass" href="' . e(url('contact/?service=' . $slug)) . '">Book a free estimate</a><a class="btn btn--ghost" href="tel:' . e(PHONE_TEL) . '"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg>' . e(PHONE) . '</a></div>';
 ?>
 <main id="main" tabindex="-1">
