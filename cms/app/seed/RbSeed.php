@@ -431,7 +431,7 @@ final class RbSeed
     private static function forms(): int
     {
         if (Db::value("SELECT 1 FROM form_types WHERE type_key = 'contact'")) return 0;
-        Db::insert('form_types', ['type_key' => 'contact', 'label' => 'Estimate request', 'is_enabled' => 1, 'recipients' => site('email.main', 'contact@rielbuild.ca'),
+        Db::insert('form_types', ['type_key' => 'contact', 'label' => 'Estimate request', 'is_enabled' => 1, 'recipients' => 'john@rielbuild.ca',
             'send_autoreply' => 0, 'retention_days' => 730, 'updated_at' => Time::nowUtc()]);
         return 1;
     }
